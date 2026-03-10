@@ -1,0 +1,213 @@
+|____docs
+| |____91Tools
+| | |____3-ssh-git实操.md
+| | |____vscode_git.md
+| | |____CoolProp.md
+| | |____CSV_jl_use.md
+| |____README.md
+| |____08AIandML
+| | |____1-机器学习和人工智能.md
+| |____04Modeling
+| | |____ModelingTutorial.md
+| | |____WathMTKdo.md
+| | |____MTK_intro.md
+| | |____benchmark_de_mtk.md
+| | |____DE_intro.md
+| | |____MTK_register.md
+| | |____MTK_tips.md
+| |____11IotBigdataCloud
+| | |____4-从虚拟机到云计算.md
+| | |____5-容器化和k8s.md
+| | |____3-大数据简介.md
+| | |____1-物联网.md
+| | |____2-消息件.md
+| |____01CSBase
+| | |____2-PowerShell和WindowsTerminal.md
+| | |____1-Windows命令提示符介绍.md
+| | |____3-环境变量及其设置.md
+| | |____4-Windows下安装gcc编译器和CLion.md
+| | |____9-dll生成与调用实操.md
+| | |____7-以SAM为例整体实操一下.md
+| | |____5-make和Makefile介绍.md
+| | |____8-以CoolProp为例的实操.md
+| | |____6-静态链接库和动态链接库.md
+| |____92Workflow
+| | |____julia的安装.md
+| | |____REPL-of-Julia.md
+| | |____julia_change_pkgserve.md
+| | |____gitworkflow.md
+| | |____1-thinkaboutstudy.md
+| | |____vscodePlugin.md
+| | |____DocStructure.md
+| |____06Optimization
+| | |____1-优化的概念.md
+| | |____97-MTK符号系统参数辨识实例.md
+| | |____GenSBO.md
+| | |____95-微分方程参数辨识实例.md
+| | |____98-MTK部分参数辨识实例.md
+| | |____94-JuMP参数辨识.md
+| | |____90-优化应用之参数估计与软测量.md
+| | |____9-优化问题建模之递归建模方法.md
+| | |____93-JuMP混合整数线性优化实例.md
+| | |____92-一些可以看一看的优化相关工具.md
+| | |____96-MTK非线性参数辨识实例.md
+| | |____5-优化问题的建模平台.md
+| | |____8-黑箱优化问题.md
+| | |____91-优化应用之代理模型.md
+| | |____Optimization.jl.md
+| | |____2-优化问题的分类.md
+| | |____MIDACO.md
+| | |____6-传统决定性算法简介.md
+| | |____4-优化问题的求解过程.md
+| | |____3-能源系统工程中的优化问题.md
+| | |____7-启发式算法简介.md
+| |____05Simulation
+| | |____MTK_heattran.md
+| | |____componementModel.md
+| | |____1-微分代数方程.md
+| | |____DE_heattran.md
+| | |____MTK_Sundials.md
+| | |____MTK_parallel_computing.md
+| | |____steadyRC.md
+| |____09EMS
+| | |____1-能源管理信息系统.md
+| |____07Control
+| | |____KalmanFiltering.md
+| | |____OptimControl.md
+| | |____JuMPMPC.md
+| | |____1-控制的本质.md
+| | |____MTKMPC.md
+| |____03CSAdv
+| | |____91-OpenFoam解构.md
+| | |____5-抽象语法树.md
+| | |____3-再说说递归.md
+| | |____9-Ascend等解构.md
+| | |____2-数据抽象.md
+| | |____1-过程抽象.md
+| | |____7-领域特定语言.md
+| | |____8-写个库还是创个语言.md
+| | |____4-从符号到模型.md
+| | |____6-代码生成.md
+| |____12GolangIntro
+| | |____01-golang的安装.md
+| | |____02-golang的特点.md
+| |____02JuliaIntro
+| | |____0050-julia的环境.md
+| | |____0110-julia的元编程.md
+| | |____0020-julia的REPL.md
+| | |____0030-julia的语法要点.md
+| | |____1003-julia的前后端分离.md
+| | |____0130-ijulia.md
+| | |____0070-julia的类型系统.md
+| | |____0090-julia代码编译成app.md
+| | |____0091-julia编译成library.md
+| | |____0120- julia-binary-wrappers.md
+| | |____1001-julia的http服务.md
+| | |____0040-julia的包管理.md
+| | |____0060-创建julia包.md
+| | |____0010-julia的安装.md
+| | |____1002-julia与grpc.md
+| | |____0092-julia编译自定义系统镜像.md
+
+
+=== Markdown 文件列表 ===
+01CSBase/1-Windows命令提示符介绍.md
+01CSBase/2-PowerShell和WindowsTerminal.md
+01CSBase/3-环境变量及其设置.md
+01CSBase/4-Windows下安装gcc编译器和CLion.md
+01CSBase/5-make和Makefile介绍.md
+01CSBase/6-静态链接库和动态链接库.md
+01CSBase/7-以SAM为例整体实操一下.md
+01CSBase/8-以CoolProp为例的实操.md
+01CSBase/9-dll生成与调用实操.md
+02JuliaIntro/0010-julia的安装.md
+02JuliaIntro/0020-julia的REPL.md
+02JuliaIntro/0030-julia的语法要点.md
+02JuliaIntro/0040-julia的包管理.md
+02JuliaIntro/0050-julia的环境.md
+02JuliaIntro/0060-创建julia包.md
+02JuliaIntro/0070-julia的类型系统.md
+02JuliaIntro/0090-julia代码编译成app.md
+02JuliaIntro/0091-julia编译成library.md
+02JuliaIntro/0092-julia编译自定义系统镜像.md
+02JuliaIntro/0110-julia的元编程.md
+02JuliaIntro/0120- julia-binary-wrappers.md
+02JuliaIntro/0130-ijulia.md
+02JuliaIntro/1001-julia的http服务.md
+02JuliaIntro/1002-julia与grpc.md
+02JuliaIntro/1003-julia的前后端分离.md
+03CSAdv/1-过程抽象.md
+03CSAdv/2-数据抽象.md
+03CSAdv/3-再说说递归.md
+03CSAdv/4-从符号到模型.md
+03CSAdv/5-抽象语法树.md
+03CSAdv/6-代码生成.md
+03CSAdv/7-领域特定语言.md
+03CSAdv/8-写个库还是创个语言.md
+03CSAdv/9-Ascend等解构.md
+03CSAdv/91-OpenFoam解构.md
+04Modeling/DE_intro.md
+04Modeling/MTK_intro.md
+04Modeling/MTK_register.md
+04Modeling/MTK_tips.md
+04Modeling/ModelingTutorial.md
+04Modeling/WathMTKdo.md
+04Modeling/benchmark_de_mtk.md
+05Simulation/1-微分代数方程.md
+05Simulation/DE_heattran.md
+05Simulation/MTK_Sundials.md
+05Simulation/MTK_heattran.md
+05Simulation/MTK_parallel_computing.md
+05Simulation/componementModel.md
+05Simulation/steadyRC.md
+06Optimization/1-优化的概念.md
+06Optimization/2-优化问题的分类.md
+06Optimization/3-能源系统工程中的优化问题.md
+06Optimization/4-优化问题的求解过程.md
+06Optimization/5-优化问题的建模平台.md
+06Optimization/6-传统决定性算法简介.md
+06Optimization/7-启发式算法简介.md
+06Optimization/8-黑箱优化问题.md
+06Optimization/9-优化问题建模之递归建模方法.md
+06Optimization/90-优化应用之参数估计与软测量.md
+06Optimization/91-优化应用之代理模型.md
+06Optimization/92-一些可以看一看的优化相关工具.md
+06Optimization/93-JuMP混合整数线性优化实例.md
+06Optimization/94-JuMP参数辨识.md
+06Optimization/95-微分方程参数辨识实例.md
+06Optimization/96-MTK非线性参数辨识实例.md
+06Optimization/97-MTK符号系统参数辨识实例.md
+06Optimization/98-MTK部分参数辨识实例.md
+06Optimization/GenSBO.md
+06Optimization/MIDACO.md
+06Optimization/Optimization.jl.md
+07Control/1-控制的本质.md
+07Control/JuMPMPC.md
+07Control/KalmanFiltering.md
+07Control/MTKMPC.md
+07Control/OptimControl.md
+08AIandML/1-机器学习和人工智能.md
+09EMS/1-能源管理信息系统.md
+11IotBigdataCloud/1-物联网.md
+11IotBigdataCloud/2-消息件.md
+11IotBigdataCloud/3-大数据简介.md
+11IotBigdataCloud/4-从虚拟机到云计算.md
+11IotBigdataCloud/5-容器化和k8s.md
+12GolangIntro/01-golang的安装.md
+12GolangIntro/02-golang的特点.md
+91Tools/3-ssh-git实操.md
+91Tools/CSV_jl_use.md
+91Tools/CoolProp.md
+91Tools/vscode_git.md
+92Workflow/1-thinkaboutstudy.md
+92Workflow/DocStructure.md
+92Workflow/REPL-of-Julia.md
+92Workflow/gitworkflow.md
+92Workflow/julia_change_pkgserve.md
+92Workflow/julia的安装.md
+92Workflow/vscodePlugin.md
+README.md
+
+
+=== 静态资源文件列表（图片、PDF等）===
+无

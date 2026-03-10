@@ -1,0 +1,71 @@
+# VitePress 测试部署工作流
+# 用于测试 VitePress 迁移后的构建和部署流程
+
+name: 部署 VitePress 测试站点
+
+on:
+  push:
+    branches:
+      - vitepress-migration-test
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs-test/**'
+      - '.github/workflows/deploy-vitepress-test.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-vitepress-test
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+          version: 10
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: 设置 GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 构建 VitePress 文档
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |
+          pnpm run vitepress:build
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs-test/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/vitepress-migration-test'
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
