@@ -27,7 +27,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '课程', link: '/courses/' },
       { text: '路线图', link: '/roadmap/' },
-      { text: 'Ai4E 文档', icon: 'book', link: 'https://docs.ai4energy.cn' },
+      { text: 'Ai4E 文档', icon: 'book', link: '/docs/' },
       { text: '组件库', link: '/ai4ecomplib/' },
       { text: '虚拟实验室', link: '/ai4elab/' },
       { text: '碳中和开源汇编', link: '/awesome-carbon-neutrality/' },
