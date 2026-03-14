@@ -97,10 +97,14 @@ export default defineConfig({
           text: '仿真',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/05Simulation/MTK_Sundials.md' },
+            { text: '简介', link: '/docs/05Simulation/1-微分代数方程.md' },
+            { text: '微分代数方程', link: '/docs/05Simulation/1-微分代数方程.md' },
             { text: 'MTK 热传递仿真', link: '/docs/05Simulation/MTK_heattran.md' },
             { text: 'DE 热传递仿真', link: '/docs/05Simulation/DE_heattran.md' },
-            { text: '稳态 RC 电路', link: '/docs/05Simulation/steadyRC.md' }
+            { text: '稳态 RC 电路', link: '/docs/05Simulation/steadyRC.md' },
+            { text: '组件模型', link: '/docs/05Simulation/componementModel.md' },
+            { text: 'MTK 并行计算', link: '/docs/05Simulation/MTK_parallel_computing.md' },
+            { text: 'MTK Sundials', link: '/docs/05Simulation/MTK_Sundials.md' }
           ]
         },
         {
@@ -118,13 +122,14 @@ export default defineConfig({
             { text: '黑箱优化问题', link: '/docs/06Optimization/8-黑箱优化问题.md' },
             { text: '优化问题建模之递归建模方法', link: '/docs/06Optimization/9-优化问题建模之递归建模方法.md' },
             { text: '优化应用之参数估计与软测量', link: '/docs/06Optimization/90-优化应用之参数估计与软测量.md' },
+            { text: '优化应用之代理模型', link: '/docs/06Optimization/91-优化应用之代理模型.md' },
             { text: '一些可以看一看的优化相关工具', link: '/docs/06Optimization/92-一些可以看一看的优化相关工具.md' },
             { text: 'JuMP 混合整数线性优化实例', link: '/docs/06Optimization/93-JuMP 混合整数线性优化实例.md' },
             { text: 'JuMP 参数辨识', link: '/docs/06Optimization/94-JuMP 参数辨识.md' },
             { text: '微分方程参数辨识实例', link: '/docs/06Optimization/95-微分方程参数辨识实例.md' },
             { text: 'MTK 非线性参数辨识实例', link: '/docs/06Optimization/96-MTK 非线性参数辨识实例.md' },
-            { text: 'MTK 部分参数辨识实例', link: '/docs/06Optimization/98-MTK 部分参数辨识实例.md' },
             { text: 'MTK 符号系统参数辨识实例', link: '/docs/06Optimization/97-MTK 符号系统参数辨识实例.md' },
+            { text: 'MTK 部分参数辨识实例', link: '/docs/06Optimization/98-MTK 部分参数辨识实例.md' },
             { text: 'Optimization.jl', link: '/docs/06Optimization/Optimization.jl.md' },
             { text: 'GenSBO', link: '/docs/06Optimization/GenSBO.md' },
             { text: 'MIDACO', link: '/docs/06Optimization/MIDACO.md' }
@@ -135,14 +140,18 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '简介', link: '/docs/07Control/1-控制的本质.md' },
+            { text: '控制的本质', link: '/docs/07Control/1-控制的本质.md' },
             { text: 'Kalman Filtering', link: '/docs/07Control/KalmanFiltering.md' },
-            { text: 'Optim Control', link: '/docs/07Control/OptimControl.md' }
+            { text: 'Optim Control', link: '/docs/07Control/OptimControl.md' },
+            { text: 'JuMP MPC', link: '/docs/07Control/JuMPMPC.md' },
+            { text: 'MTK MPC', link: '/docs/07Control/MTKMPC.md' }
           ]
         },
         {
           text: 'AI 和 ML',
           collapsed: true,
           items: [
+            { text: '简介', link: '/docs/08AIandML/1-机器学习和人工智能.md' },
             { text: '机器学习和人工智能', link: '/docs/08AIandML/1-机器学习和人工智能.md' }
           ]
         },
