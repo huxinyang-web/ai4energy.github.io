@@ -25,8 +25,8 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Ai4E 文档', icon: 'book', link: 'https://docs.ai4energy.cn' },
-      { text: '联系我们', icon: 'envelope', link: '/contactus/' }
+      { text: 'Ai4E 文档', icon: 'book', link: '/docs/01CSBase/1-Windows 命令提示符介绍' },
+      { text: '联系我们', icon: 'envelope', link: '/contactus' }
     ],
 
     sidebar: {
