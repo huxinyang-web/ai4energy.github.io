@@ -21,12 +21,19 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: 'Ai4Energy',
-    logo: '/assets/icon/chrome-512.png',
+    logo: '/logo.svg',
 
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Ai4E 文档', icon: 'book', link: '/docs/01CSBase/1-Windows 命令提示符介绍' },
-      { text: '联系我们', icon: 'envelope', link: '/contactus' }
+      { text: '课程', link: '/courses/' },
+      { text: '路线图', link: '/roadmap/' },
+      { text: 'Ai4E 文档', link: '/docs/' },
+      { text: '组件库', link: '/ai4ecomplib/' },
+      { text: '虚拟实验室', link: '/ai4elab/' },
+      { text: '碳中和开源汇编', link: '/awesome-carbon-neutrality/' },
+      { text: '新闻', link: '/news/' },
+      { text: '赞助商专属', link: '/sponsors/' },
+      { text: '联系我们', link: '/contactus/' }
     ],
 
     sidebar: {
