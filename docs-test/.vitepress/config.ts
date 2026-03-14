@@ -7,18 +7,6 @@ export default defineConfig({
   description: 'Ai4Energy 的主页',
   base: '/ai4energy.github.io/',
   ignoreDeadLinks: true,
-
-  markdown: {
-    config: (md) => {
-      md.use(katex)
-      md.use(mermaid)
-    }
-  },
-
-  head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }]
-  ],
-
   themeConfig: {
     siteTitle: 'Ai4Energy',
     logo: '/logo.svg',
@@ -59,7 +47,38 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '简介', link: '/docs/02JuliaIntro/0010-julia 的安装.md' },
-            { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120-julia-binary-wrappers.md' }
+            { text: 'julia 的 REPL', link: '/docs/02JuliaIntro/0020-julia 的 REPL.md' },
+            { text: 'julia 的语法要点', link: '/docs/02JuliaIntro/0030-julia 的语法要点.md' },
+            { text: 'julia 的包管理', link: '/docs/02JuliaIntro/0040-julia 的包管理.md' },
+            { text: 'julia 的环境', link: '/docs/02JuliaIntro/0050-julia 的环境.md' },
+            { text: '创建 julia 包', link: '/docs/02JuliaIntro/0060-创建 julia 包.md' },
+            { text: 'julia 的类型系统', link: '/docs/02JuliaIntro/0070-julia 的类型系统.md' },
+            { text: 'julia 代码编译成 app', link: '/docs/02JuliaIntro/0090-julia 代码编译成 app.md' },
+            { text: 'julia 编译成 library', link: '/docs/02JuliaIntro/0091-julia 编译成 library.md' },
+            { text: 'julia 编译自定义系统镜像', link: '/docs/02JuliaIntro/0092-julia 编译自定义系统镜像.md' },
+            { text: 'julia 的元编程', link: '/docs/02JuliaIntro/0110-julia 的元编程.md' },
+            { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120- julia-binary-wrappers.md' },
+            { text: 'ijulia', link: '/docs/02JuliaIntro/0130-ijulia.md' },
+            { text: 'julia 的 http 服务', link: '/docs/02JuliaIntro/1001-julia 的 http 服务.md' },
+            { text: 'julia 与 grpc', link: '/docs/02JuliaIntro/1002-julia 与 grpc.md' },
+            { text: 'julia 的前后端分离', link: '/docs/02JuliaIntro/1003-julia 的前后端分离.md' }
+          ]
+        },
+        {
+          text: 'CS 进阶',
+          collapsed: true,
+          items: [
+            { text: '简介', link: '/docs/03CSAdv/1-过程抽象.md' },
+            { text: '过程抽象', link: '/docs/03CSAdv/1-过程抽象.md' },
+            { text: '数据抽象', link: '/docs/03CSAdv/2-数据抽象.md' },
+            { text: '再说说递归', link: '/docs/03CSAdv/3-再说说递归.md' },
+            { text: '从符号到模型', link: '/docs/03CSAdv/4-从符号到模型.md' },
+            { text: '抽象语法树', link: '/docs/03CSAdv/5-抽象语法树.md' },
+            { text: '代码生成', link: '/docs/03CSAdv/6-代码生成.md' },
+            { text: '领域特定语言', link: '/docs/03CSAdv/7-领域特定语言.md' },
+            { text: '写个库还是创个语言', link: '/docs/03CSAdv/8-写个库还是创个语言.md' },
+            { text: 'Ascend 等解构', link: '/docs/03CSAdv/9-Ascend 等解构.md' },
+            { text: 'OpenFoam 解构', link: '/docs/03CSAdv/91-OpenFoam 解构.md' }
           ]
         },
         {
@@ -153,6 +172,14 @@ export default defineConfig({
           ]
         },
         {
+          text: '能源管理系统',
+          collapsed: true,
+          items: [
+            { text: '简介', link: '/docs/09EMS/1-能源管理信息系统.md' },
+            { text: '能源管理信息系统', link: '/docs/09EMS/1-能源管理信息系统.md' }
+          ]
+        },
+        {
           text: '物联网大数据云计算',
           collapsed: true,
           items: [
@@ -162,6 +189,14 @@ export default defineConfig({
             { text: '大数据简介', link: '/docs/11IotBigdataCloud/3-大数据简介.md' },
             { text: '从虚拟机到云计算', link: '/docs/11IotBigdataCloud/4-从虚拟机到云计算.md' },
             { text: '容器化和 k8s', link: '/docs/11IotBigdataCloud/5-容器化和 k8s.md' }
+          ]
+        },
+        {
+          text: 'Go 语言简介',
+          collapsed: true,
+          items: [
+            { text: 'golang 的安装', link: '/docs/12GolangIntro/01-golang 的安装.md' },
+            { text: 'golang 的特点', link: '/docs/12GolangIntro/02-golang 的特点.md' }
           ]
         }
       ],
@@ -241,5 +276,16 @@ export default defineConfig({
       label: '页面导航',
       level: 2
     }
-  }
+  },
+
+  markdown: {
+    config: (md) => {
+      md.use(katex)
+      md.use(mermaid)
+    }
+  },
+
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }]
+  ]
 })

@@ -1,0 +1,125 @@
+/* 自定义样式 */
+
+/* 修复文字溢出问题 - 强制换行 */
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3,
+.VPDoc h4,
+.VPDoc h5,
+.VPDoc h6,
+.VPDoc p,
+.VPDoc a,
+.VPDoc td,
+.VPDoc th,
+.VPDoc code,
+.VPDoc .vp-code {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 修复表格内文字溢出 */
+.VPDoc table {
+  table-layout: fixed;
+}
+
+.VPDoc table td,
+.VPDoc table th {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 修复代码块内文字溢出 */
+.VPDoc pre,
+.VPDoc code {
+  word-wrap: normal;
+  word-break: normal;
+  overflow-x: auto;
+}
+
+/* 修复导航栏文字溢出 */
+.VPNavBar .title,
+.VPNavBar .link {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 修复侧边栏文字溢出 */
+.VPSidebar .text,
+.VPSidebar .link {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* 自定义容器样式 - 替换紫色背景为蓝色 */
+.custom-block.info {
+  background-color: #e6f3ff;
+  border-color: #0066cc;
+}
+
+.custom-block.info .custom-block-title {
+  color: #0066cc;
+}
+
+/* 确保所有 custom-block 都不使用紫色 */
+.custom-block.note,
+.custom-block.info,
+.custom-block.tip,
+.custom-block.warning,
+.custom-block.danger {
+  border-radius: 8px;
+  padding: 16px;
+  border-left: 4px solid;
+  margin: 16px 0;
+}
+
+.custom-block.note {
+  background-color: #e6f3ff;
+  border-color: #0066cc;
+}
+
+.custom-block.note .custom-block-title {
+  color: #0066cc;
+}
+
+.custom-block.tip {
+  background-color: #e6ffed;
+  border-color: #28a745;
+}
+
+.custom-block.tip .custom-block-title {
+  color: #28a745;
+}
+
+.custom-block.warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.custom-block.warning .custom-block-title {
+  color: #856404;
+}
+
+.custom-block.danger {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.custom-block.danger .custom-block-title {
+  color: #721c24;
+}
+
+/* 修复长URL和长单词溢出 */
+.VPDoc a {
+  word-break: break-word;
+}
+
+/* 修复数学公式溢出 */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
