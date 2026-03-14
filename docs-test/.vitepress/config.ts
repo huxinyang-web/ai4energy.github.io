@@ -52,7 +52,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '简介', link: '/docs/02JuliaIntro/0010-julia 的安装' },
-            { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120- julia-binary-wrappers' }
+            { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120-julia-binary-wrappers' }
           ]
         },
         {
@@ -81,7 +81,7 @@ export default defineConfig({
           text: '优化',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/06Optimization/' },
+            { text: '简介', link: '/docs/06Optimization/1-优化的概念' },
             { text: '优化的概念', link: '/docs/06Optimization/1-优化的概念' },
             { text: '优化问题的分类', link: '/docs/06Optimization/2-优化问题的分类' },
             { text: '能源系统工程中的优化问题', link: '/docs/06Optimization/3-能源系统工程中的优化问题' },
@@ -110,7 +110,7 @@ export default defineConfig({
           items: [
             { text: '简介', link: '/docs/07Control/1-控制的本质' },
             { text: 'Kalman Filtering', link: '/docs/07Control/KalmanFiltering' },
-            { text: 'Optim Control', link: '/docs/07Control/OptimControl.md' }
+            { text: 'Optim Control', link: '/docs/07Control/OptimControl' }
           ]
         },
         {
