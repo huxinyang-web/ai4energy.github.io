@@ -5,6 +5,7 @@ import mermaid from 'markdown-it-mermaid-plugin'
 export default defineConfig({
   title: 'Ai4Energy',
   description: 'Ai4Energy 的主页',
+  base: '/ai4energy.github.io/',
   ignoreDeadLinks: true,
 
   markdown: {
@@ -20,7 +21,7 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: 'Ai4Energy',
-    logo: '/logo.svg',
+    logo: '/assets/icon/chrome-512.png',
 
     nav: [
       { text: '首页', link: '/' },
