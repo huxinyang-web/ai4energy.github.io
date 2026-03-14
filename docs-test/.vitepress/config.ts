@@ -30,38 +30,38 @@ export default defineConfig({
           text: 'CS 基础',
           collapsed: false,
           items: [
-            { text: '简介', link: '/docs/01CSBase/1-Windows 命令提示符介绍.md' },
-            { text: 'Windows 命令提示符介绍', link: '/docs/01CSBase/1-Windows 命令提示符介绍.md' },
-            { text: 'PowerShell 和 Windows Terminal', link: '/docs/01CSBase/2-PowerShell 和 WindowsTerminal.md' },
+            { text: '简介', link: '/docs/01CSBase/1-Windows命令提示符介绍.md' },
+            { text: 'Windows 命令提示符介绍', link: '/docs/01CSBase/1-Windows命令提示符介绍.md' },
+            { text: 'PowerShell 和 Windows Terminal', link: '/docs/01CSBase/2-PowerShell和WindowsTerminal.md' },
             { text: '环境变量及其设置', link: '/docs/01CSBase/3-环境变量及其设置.md' },
-            { text: 'Windows 下安装 gcc 编译器和 CLion', link: '/docs/01CSBase/4-Windows 下安装 gcc 编译器和 CLion.md' },
-            { text: 'make 和 Makefile 介绍', link: '/docs/01CSBase/5-make 和 Makefile 介绍.md' },
+            { text: 'Windows 下安装 gcc 编译器和 CLion', link: '/docs/01CSBase/4-Windows下安装gcc编译器和CLion.md' },
+            { text: 'make 和 Makefile 介绍', link: '/docs/01CSBase/5-make和Makefile介绍.md' },
             { text: '静态链接库和动态链接库', link: '/docs/01CSBase/6-静态链接库和动态链接库.md' },
-            { text: '以 SAM 为例整体实操一下', link: '/docs/01CSBase/7-以 SAM 为例整体实操一下.md' },
-            { text: '以 CoolProp 为例的实操', link: '/docs/01CSBase/8-以 CoolProp 为例的实操.md' },
-            { text: 'dll 生成与调用实操', link: '/docs/01CSBase/9-dll 生成与调用实操.md' }
+            { text: '以 SAM 为例整体实操一下', link: '/docs/01CSBase/7-以SAM为例整体实操一下.md' },
+            { text: '以 CoolProp 为例的实操', link: '/docs/01CSBase/8-以CoolProp为例的实操.md' },
+            { text: 'dll 生成与调用实操', link: '/docs/01CSBase/9-dll生成与调用实操.md' }
           ]
         },
         {
           text: 'Julia 入门',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/02JuliaIntro/0010-julia 的安装.md' },
-            { text: 'julia 的 REPL', link: '/docs/02JuliaIntro/0020-julia 的 REPL.md' },
-            { text: 'julia 的语法要点', link: '/docs/02JuliaIntro/0030-julia 的语法要点.md' },
-            { text: 'julia 的包管理', link: '/docs/02JuliaIntro/0040-julia 的包管理.md' },
-            { text: 'julia 的环境', link: '/docs/02JuliaIntro/0050-julia 的环境.md' },
-            { text: '创建 julia 包', link: '/docs/02JuliaIntro/0060-创建 julia 包.md' },
-            { text: 'julia 的类型系统', link: '/docs/02JuliaIntro/0070-julia 的类型系统.md' },
-            { text: 'julia 代码编译成 app', link: '/docs/02JuliaIntro/0090-julia 代码编译成 app.md' },
-            { text: 'julia 编译成 library', link: '/docs/02JuliaIntro/0091-julia 编译成 library.md' },
-            { text: 'julia 编译自定义系统镜像', link: '/docs/02JuliaIntro/0092-julia 编译自定义系统镜像.md' },
-            { text: 'julia 的元编程', link: '/docs/02JuliaIntro/0110-julia 的元编程.md' },
+            { text: '简介', link: '/docs/02JuliaIntro/0010-julia的安装.md' },
+            { text: 'julia 的 REPL', link: '/docs/02JuliaIntro/0020-julia的REPL.md' },
+            { text: 'julia 的语法要点', link: '/docs/02JuliaIntro/0030-julia的语法要点.md' },
+            { text: 'julia 的包管理', link: '/docs/02JuliaIntro/0040-julia的包管理.md' },
+            { text: 'julia 的环境', link: '/docs/02JuliaIntro/0050-julia的环境.md' },
+            { text: '创建 julia 包', link: '/docs/02JuliaIntro/0060-创建julia包.md' },
+            { text: 'julia 的类型系统', link: '/docs/02JuliaIntro/0070-julia的类型系统.md' },
+            { text: 'julia 代码编译成 app', link: '/docs/02JuliaIntro/0090-julia代码编译成app.md' },
+            { text: 'julia 编译成 library', link: '/docs/02JuliaIntro/0091-julia编译成library.md' },
+            { text: 'julia 编译自定义系统镜像', link: '/docs/02JuliaIntro/0092-julia编译自定义系统镜像.md' },
+            { text: 'julia 的元编程', link: '/docs/02JuliaIntro/0110-julia的元编程.md' },
             { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120- julia-binary-wrappers.md' },
             { text: 'ijulia', link: '/docs/02JuliaIntro/0130-ijulia.md' },
-            { text: 'julia 的 http 服务', link: '/docs/02JuliaIntro/1001-julia 的 http 服务.md' },
-            { text: 'julia 与 grpc', link: '/docs/02JuliaIntro/1002-julia 与 grpc.md' },
-            { text: 'julia 的前后端分离', link: '/docs/02JuliaIntro/1003-julia 的前后端分离.md' }
+            { text: 'julia 的 http 服务', link: '/docs/02JuliaIntro/1001-julia的http服务.md' },
+            { text: 'julia 与 grpc', link: '/docs/02JuliaIntro/1002-julia与grpc.md' },
+            { text: 'julia 的前后端分离', link: '/docs/02JuliaIntro/1003-julia的前后端分离.md' }
           ]
         },
         {
@@ -77,8 +77,8 @@ export default defineConfig({
             { text: '代码生成', link: '/docs/03CSAdv/6-代码生成.md' },
             { text: '领域特定语言', link: '/docs/03CSAdv/7-领域特定语言.md' },
             { text: '写个库还是创个语言', link: '/docs/03CSAdv/8-写个库还是创个语言.md' },
-            { text: 'Ascend 等解构', link: '/docs/03CSAdv/9-Ascend 等解构.md' },
-            { text: 'OpenFoam 解构', link: '/docs/03CSAdv/91-OpenFoam 解构.md' }
+            { text: 'Ascend 等解构', link: '/docs/03CSAdv/9-Ascend等解构.md' },
+            { text: 'OpenFoam 解构', link: '/docs/03CSAdv/91-OpenFoam解构.md' }
           ]
         },
         {
@@ -124,12 +124,12 @@ export default defineConfig({
             { text: '优化应用之参数估计与软测量', link: '/docs/06Optimization/90-优化应用之参数估计与软测量.md' },
             { text: '优化应用之代理模型', link: '/docs/06Optimization/91-优化应用之代理模型.md' },
             { text: '一些可以看一看的优化相关工具', link: '/docs/06Optimization/92-一些可以看一看的优化相关工具.md' },
-            { text: 'JuMP 混合整数线性优化实例', link: '/docs/06Optimization/93-JuMP 混合整数线性优化实例.md' },
-            { text: 'JuMP 参数辨识', link: '/docs/06Optimization/94-JuMP 参数辨识.md' },
+            { text: 'JuMP 混合整数线性优化实例', link: '/docs/06Optimization/93-JuMP混合整数线性优化实例.md' },
+            { text: 'JuMP 参数辨识', link: '/docs/06Optimization/94-JuMP参数辨识.md' },
             { text: '微分方程参数辨识实例', link: '/docs/06Optimization/95-微分方程参数辨识实例.md' },
-            { text: 'MTK 非线性参数辨识实例', link: '/docs/06Optimization/96-MTK 非线性参数辨识实例.md' },
-            { text: 'MTK 符号系统参数辨识实例', link: '/docs/06Optimization/97-MTK 符号系统参数辨识实例.md' },
-            { text: 'MTK 部分参数辨识实例', link: '/docs/06Optimization/98-MTK 部分参数辨识实例.md' },
+            { text: 'MTK 非线性参数辨识实例', link: '/docs/06Optimization/96-MTK非线性参数辨识实例.md' },
+            { text: 'MTK 符号系统参数辨识实例', link: '/docs/06Optimization/97-MTK符号系统参数辨识实例.md' },
+            { text: 'MTK 部分参数辨识实例', link: '/docs/06Optimization/98-MTK部分参数辨识实例.md' },
             { text: 'Optimization.jl', link: '/docs/06Optimization/Optimization.jl.md' },
             { text: 'GenSBO', link: '/docs/06Optimization/GenSBO.md' },
             { text: 'MIDACO', link: '/docs/06Optimization/MIDACO.md' }
@@ -163,15 +163,15 @@ export default defineConfig({
             { text: 'VSCode 和 Git', link: '/docs/91Tools/vscode_git.md' },
             { text: 'CoolProp', link: '/docs/91Tools/CoolProp.md' },
             { text: 'CSV_jl_use', link: '/docs/91Tools/CSV_jl_use.md' },
-            { text: 'ssh-git 实操', link: '/docs/91Tools/3-ssh-git 实操.md' }
+            { text: 'ssh-git 实操', link: '/docs/91Tools/3-ssh-git实操.md' }
           ]
         },
         {
           text: '工作流',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/92Workflow/julia 的安装.md' },
-            { text: 'julia 的安装', link: '/docs/92Workflow/julia 的安装.md' },
+            { text: '简介', link: '/docs/92Workflow/julia的安装.md' },
+            { text: 'julia 的安装', link: '/docs/92Workflow/julia的安装.md' },
             { text: 'REPL-of-Julia', link: '/docs/92Workflow/REPL-of-Julia.md' },
             { text: 'julia_change_pkgserve', link: '/docs/92Workflow/julia_change_pkgserve.md' },
             { text: 'gitworkflow', link: '/docs/92Workflow/gitworkflow.md' },
@@ -197,15 +197,15 @@ export default defineConfig({
             { text: '消息件', link: '/docs/11IotBigdataCloud/2-消息件.md' },
             { text: '大数据简介', link: '/docs/11IotBigdataCloud/3-大数据简介.md' },
             { text: '从虚拟机到云计算', link: '/docs/11IotBigdataCloud/4-从虚拟机到云计算.md' },
-            { text: '容器化和 k8s', link: '/docs/11IotBigdataCloud/5-容器化和 k8s.md' }
+            { text: '容器化和 k8s', link: '/docs/11IotBigdataCloud/5-容器化和k8s.md' }
           ]
         },
         {
           text: 'Go 语言简介',
           collapsed: true,
           items: [
-            { text: 'golang 的安装', link: '/docs/12GolangIntro/01-golang 的安装.md' },
-            { text: 'golang 的特点', link: '/docs/12GolangIntro/02-golang 的特点.md' }
+            { text: 'golang 的安装', link: '/docs/12GolangIntro/01-golang的安装.md' },
+            { text: 'golang 的特点', link: '/docs/12GolangIntro/02-golang的特点.md' }
           ]
         }
       ],
