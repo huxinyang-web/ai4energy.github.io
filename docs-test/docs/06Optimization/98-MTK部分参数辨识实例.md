@@ -8,6 +8,7 @@
     Email:1171006975@qq.com
 
     如有错误，请批评指正。
+:::
 
 ::: info
     DEPE = DiffEqParamEstim.jl(Differential Equation Parameters Estimate)

@@ -8,6 +8,7 @@
     Email:
 
     如有错误，请批评指正。
+:::
 
 ## 下载网址
 
@@ -32,6 +33,7 @@
 最后，下拉找到julia-xxx-win64.zip安装包，点击下载。
 ![](/assets/image/92Workflow/7.png)
 
+:::
 ## 解压安装
 
 找到下载好的安装包，右键解压。解压后，生成一个julia-1.7.2文件夹。可执行文件julia.exe就在julia-1.7.2文件夹的bin文件夹下。
@@ -46,6 +48,7 @@
 
 ::: tip
     也可使直接“![](/assets/image/92Workflow/icon-win.svg) + r”打开运行▱，输入 `rundll32 sysdm.cpl,EditEnvironmentVariables` 直接打开环境变量设置界面，注意，此时无法编辑系统环境变量（实际上也并不建议直接编辑系统环境变量），编辑用户环境变量即可。
+:::
 
 ## 执行julia
 
