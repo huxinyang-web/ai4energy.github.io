@@ -35,7 +35,7 @@ export default defineConfig({
           text: 'CS 基础',
           collapsed: false,
           items: [
-            { text: '简介', link: '/docs/01CSBase/' },
+            { text: '简介', link: '/docs/01CSBase/1-Windows 命令提示符介绍' },
             { text: 'Windows 命令提示符介绍', link: '/docs/01CSBase/1-Windows 命令提示符介绍' },
             { text: 'PowerShell 和 Windows Terminal', link: '/docs/01CSBase/2-PowerShell 和 WindowsTerminal' },
             { text: '环境变量及其设置', link: '/docs/01CSBase/3-环境变量及其设置' },
@@ -51,7 +51,7 @@ export default defineConfig({
           text: 'Julia 入门',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/02JuliaIntro/' },
+            { text: '简介', link: '/docs/02JuliaIntro/0010-julia 的安装' },
             { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120- julia-binary-wrappers' }
           ]
         },
@@ -59,7 +59,7 @@ export default defineConfig({
           text: '建模工具',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/04Modeling/' },
+            { text: '简介', link: '/docs/04Modeling/MTK_intro' },
             { text: 'What MTK do', link: '/docs/04Modeling/WathMTKdo' },
             { text: 'MTK 简介', link: '/docs/04Modeling/MTK_intro' },
             { text: 'MTK 参数辨识', link: '/docs/04Modeling/MTK_register' },
@@ -71,7 +71,7 @@ export default defineConfig({
           text: '仿真',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/05Simulation/' },
+            { text: '简介', link: '/docs/05Simulation/MTK_Sundials' },
             { text: 'MTK 热传递仿真', link: '/docs/05Simulation/MTK_heattran' },
             { text: 'DE 热传递仿真', link: '/docs/05Simulation/DE_heattran' },
             { text: '稳态 RC 电路', link: '/docs/05Simulation/steadyRC' }
@@ -108,7 +108,7 @@ export default defineConfig({
           text: '控制',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/07Control/' },
+            { text: '简介', link: '/docs/07Control/1-控制的本质' },
             { text: 'Kalman Filtering', link: '/docs/07Control/KalmanFiltering' },
             { text: 'Optim Control', link: '/docs/07Control/OptimControl.md' }
           ]
@@ -124,7 +124,7 @@ export default defineConfig({
           text: '工具',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/91Tools/' },
+            { text: '简介', link: '/docs/91Tools/vscode_git' },
             { text: 'VSCode 和 Git', link: '/docs/91Tools/vscode_git' },
             { text: 'CoolProp', link: '/docs/91Tools/CoolProp' },
             { text: 'CSV_jl_use', link: '/docs/91Tools/CSV_jl_use' },
@@ -135,7 +135,7 @@ export default defineConfig({
           text: '工作流',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/92Workflow/' },
+            { text: '简介', link: '/docs/92Workflow/julia 的安装' },
             { text: 'julia 的安装', link: '/docs/92Workflow/julia 的安装' },
             { text: 'REPL-of-Julia', link: '/docs/92Workflow/REPL-of-Julia' },
             { text: 'julia_change_pkgserve', link: '/docs/92Workflow/julia_change_pkgserve' },
@@ -149,7 +149,7 @@ export default defineConfig({
           text: '物联网大数据云计算',
           collapsed: true,
           items: [
-            { text: '简介', link: '/docs/11IotBigdataCloud/' },
+            { text: '简介', link: '/docs/11IotBigdataCloud/1-物联网' },
             { text: '物联网', link: '/docs/11IotBigdataCloud/1-物联网' },
             { text: '消息件', link: '/docs/11IotBigdataCloud/2-消息件' },
             { text: '大数据简介', link: '/docs/11IotBigdataCloud/3-大数据简介' },
@@ -163,7 +163,7 @@ export default defineConfig({
           text: 'Go-zero 教程',
           collapsed: false,
           items: [
-            { text: '简介', link: '/tutorial/' },
+            { text: '简介', link: '/tutorial/01-docker-compose 环境准备' },
             { text: 'docker-compose 环境准备', link: '/tutorial/01-docker-compose 环境准备' },
             { text: 'emqx 消息服务器准备', link: '/tutorial/02-emqx 消息服务器准备' },
             { text: 'mysql 数据库准备', link: '/tutorial/03-mysql 数据库准备' },
