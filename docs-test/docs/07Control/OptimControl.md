@@ -8,6 +8,7 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
+:::
 
 ::: note
 
@@ -16,6 +17,7 @@
     [Symbolics.jl](https://symbolics.juliasymbolics.org/dev/)为符号计算包
 
     [EquationsSolver](https://jake484.github.io/EquationsSolver.jl/)自制的小型方程（组）求解器。
+:::
 
 ## 1 问题描述
 
@@ -91,6 +93,7 @@ $$\mathbf{A}=\begin{bmatrix}0&1\\\mathbf{J^{-1}K}&0\end{bmatrix},\mathbf{B}=\beg
 ::: note
     状态方程的定义为:描述系统状态变量与输入变量之间关系的一阶微分方程组，称为系统的状态方程。状态方程表征了系统由输入量引起的内部状态变量的变化情况。
 
+:::
 ## 3 最优控制问题解析解
 
 **首先，介绍系统一般性数学描述：**
