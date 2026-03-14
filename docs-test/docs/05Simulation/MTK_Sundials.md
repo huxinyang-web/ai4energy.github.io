@@ -8,7 +8,7 @@
 
     如有错误，请批评指正。
 
-::: info
+::: note
 
     MTK = ModelingToolkit.jl
 

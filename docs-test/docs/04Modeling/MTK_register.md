@@ -8,16 +8,14 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
 
     MTK = ModelingToolkit.jl
 
     [ModelingToolkit.jl](https://mtk.sciml.ai/stable/)为基于符号系统的建模工具包。
 
     MTK-Version:8.5 及以上
-:::
 
 ## 提出问题
 
@@ -111,10 +109,9 @@ plot(sol)
 
 MTK符号运算系统加上外部调用函数符号化，基本上可以解决各类仿真问题。
 
-::: info
+::: note
     个人观点：
 
-:::
     从仿真层面来说，MTK具有了作为一个仿真引擎的所有功能。
 
     从程序开发层面来说，MTK具备搭建一个巨型系统的潜力。

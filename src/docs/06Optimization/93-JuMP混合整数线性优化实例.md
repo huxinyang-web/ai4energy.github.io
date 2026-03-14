@@ -1,6 +1,6 @@
 # JuMP混合整数线性优化实例
 
-!!! tip
+::: tip
     Contents：优化
 
     Contributor: YJY
@@ -229,72 +229,53 @@ Blueprint 30: Each ore robot costs 4 ore. Each clay robot costs 3 ore. Each obsi
 
 所以有：
 
-```math
-
-robots_{i,j}  \in N\\
+$$robots_{i,j}  \in N\\
 isBuild_{i,j} \in \{0,1\}\\
 obtains_{i,j} \in N\\
 i \in \{ore, clay, obsidian, geode\}\\
-j \in \{1,2,3...,23,24\}
-
-```
+j \in \{1,2,3...,23,24\}$$
 
 优化目标为第24分钟，紫晶最多：
 
-```math
-
-\max obtains_{geode,24} 
-
-```
+$$\max obtains_{geode,24}$$
 
 约束：
 
 - 矿石量等于上一周期的矿石量加上本周期的产出减去本周期的消耗。
 
-!!! note
+::: note
     costs的每一行是建造不同种机器人消耗的材料个数。
 
-    ```math
-    costs =  \begin{bmatrix}[4, 3, 2, 3] \\ [0, 0, 17, 0] \\ [0, 0, 0, 16] \\ [0, 0, 0, 0]\end{bmatrix}
+    $$costs =  \begin{bmatrix}[4, 3, 2, 3] \\ [0, 0, 17, 0] \\ [0, 0, 0, 16] \\ [0, 0, 0, 0]\end{bmatrix}
     ```
 
-    例如，第一行为建造4中不同的机器人，分别要消耗4，3，2，3个ore；第二行为建造4中不同的机器人,分别要消耗0，0，17，0个clay：
-
-```math
+    例如，第一行为建造4中不同的机器人，分别要消耗4，3，2，3个ore；第二行为建造4中不同的机器人,分别要消耗0，0，17，0个clay：$$math
 obtains_{i,j} = obtains_{i,j-1}+robots_{i,j} - \sum_{k}^{} costs_{i,k} * isBulid_{k,j}
 ```
 
 - 上一个周期结束，矿石足够才能在本周期建造机器人
 
-```math
-obtains_{i,j-1} \geqslant \sum_{k}^{} costs_{i,k} * isBulid_{k,j}
-```
+$$obtains_{i,j-1} \geqslant \sum_{k}^{} costs_{i,k} * isBulid_{k,j}$$
 
 - 建造机器人，数量增加
 
-```math
-robots_{i,j} =  robots_{i,j-1}  + isBulid_{i,j-1}
-```
+$$robots_{i,j} =  robots_{i,j-1}  + isBulid_{i,j-1}$$
 
 - 一次只能建造一个机器人
 
-```math
-\sum_{k}^{} isBulid_{k,j} \leqslant 1
-```
+$$\sum_{k}^{} isBulid_{k,j} \leqslant 1$$
 
 - 初值条件，没有材料且只有一台矿石机器人：
 
-```math
-isBulid_{i,1} = 0, i \in \{ore, clay, obsidian, geode\}\\
+$$isBulid_{i,1} = 0, i \in \{ore, clay, obsidian, geode\}\\
 obtain_{i,1} = 0, i \in \{ clay, obsidian, geode\}\\
 robots_{i,1} = 0, i \in \{ clay, obsidian, geode\}\\
 obtain_{ore,1} = 1 \\
-robots_{ore,1} = 1 \\
-```
+robots_{ore,1} = 1 \\$$
 
 ## JuMP求解代码
 
-```@example solve
+```julia solve
 using JuMP
 import HiGHS
 

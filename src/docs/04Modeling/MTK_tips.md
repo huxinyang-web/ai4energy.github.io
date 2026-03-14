@@ -1,7 +1,7 @@
 
 # MTK常见问题
 
-!!! tip
+::: tip
     Contents：建模、MTK、外部函数
 
     Contributor: YYB

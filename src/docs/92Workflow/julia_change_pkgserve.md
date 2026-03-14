@@ -1,6 +1,6 @@
 # Julia换源(更换国内镜像站)
 
-!!! tip
+::: tip
     Contents：JuliaPkg
 
     Contributor: YJY

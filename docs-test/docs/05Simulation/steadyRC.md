@@ -8,9 +8,8 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
 
     MTK = ModelingToolkit.jl
 

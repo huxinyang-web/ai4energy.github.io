@@ -1,6 +1,6 @@
 # 卡尔曼滤波理论与应用
 
-!!! tip
+::: tip
     Contents：卡尔曼滤波(Kalman Filtering)
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     一篇[卡尔曼滤波的英文博客](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)，兼具理论与感性认识。
 
@@ -39,12 +39,10 @@
 
 只给结论，不推导。
 
-```math
-\left\{\begin{array}{l}
+$$\left\{\begin{array}{l}
 x_{k}=F_{k-1} x_{k-1}+\Gamma_{k-1} w_{k-1} \\
 z_{k}=H_{k} x_{k}+v_{k}
-\end{array}\right.
-```
+\end{array}\right.$$
 
 其中：
 
@@ -65,18 +63,14 @@ $$w_k \sim N(0,Q_k) \\ v_k \sim N(0,R_k)$$
 
 Step1 模型计算:
 
-```math
-x_{k}=F_{k-1} x_{k-1}\\
-P_{k}=F_{k-1} P_{k-1} F_{k-1}^{T}+\Gamma_{k-1} Q_{k-1} \Gamma_{k-1}^{T}
-```
+$$x_{k}=F_{k-1} x_{k-1}\\
+P_{k}=F_{k-1} P_{k-1} F_{k-1}^{T}+\Gamma_{k-1} Q_{k-1} \Gamma_{k-1}^{T}$$
 
 Step2 滤波:
 
-```math
-G_{k}=P_{k } H_{k}^{T}\left[H_{k} P_{k} H_{k}^{T}+R_{k}\right]^{-1}\\
+$$G_{k}=P_{k } H_{k}^{T}\left[H_{k} P_{k} H_{k}^{T}+R_{k}\right]^{-1}\\
 \hat{x}_{k}=x_{k}+G_{k}(\tilde{z}_{k} - H_{k}x_{k})\\
-\hat{P}_k = (I-G_kH_k)P_k
-```
+\hat{P}_k = (I-G_kH_k)P_k$$
 
 其中：
 

@@ -1,6 +1,6 @@
 # 文档（docs）编写方法
 
-!!! tip
+::: tip
     Contents：文档编写方法介绍
 
     Contributor: YJY
@@ -55,6 +55,6 @@ make.jl中的page链接了全部文档。
 
 如果没有在make.jl中链接，就不会在html中显示。**没链接等于没写🤣🤣🤣**。
 
-!!! note
+::: note
 
     某些库会设计自动链接，如果自动链接了就不需要手动添加了。

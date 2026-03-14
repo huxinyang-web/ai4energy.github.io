@@ -1,6 +1,6 @@
 # CSV.jl使用简介
 
-!!! tip
+::: tip
     Contents：CSV文本读入
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     [CSV.jl](https://csv.juliadata.org/stable/)是一个快速灵活的纯 Julia包，用于处理带分隔符的文本文件。
 
@@ -164,7 +164,7 @@ sum(data.col1)
 a = data.col1 .* data.col2
 ```
 
-!!! tip
+::: tip
     推荐一个好用的数据展示包DataFrames，它一般与CSV.jl结合起来使用
 
     在julia的包模式下安装：

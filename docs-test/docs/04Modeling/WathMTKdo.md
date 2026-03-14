@@ -8,9 +8,8 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
 
     MTK = ModelingToolkit.jl
 
@@ -19,7 +18,6 @@
     [ModelingToolkit.jl](https://mtk.sciml.ai/stable/)为基于符号系统的建模工具包。
 
     [DifferentialEquations.jl](https://diffeq.sciml.ai/dev/)为处理时间微分的求解建模工具包。
-:::
 
 MTK似乎很强大，本篇介绍MTK在建模中承担的角色。
 

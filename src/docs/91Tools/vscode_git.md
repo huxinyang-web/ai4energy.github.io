@@ -1,6 +1,6 @@
 # VScode中使用Git
 
-!!! tip
+::: tip
     Contents：VScode,Git
 
     Contributor: YJY

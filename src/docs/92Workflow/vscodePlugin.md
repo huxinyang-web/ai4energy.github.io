@@ -1,6 +1,6 @@
 # VScode开发环境配置
 
-!!! tip
+::: tip
     Contents：VScode插件介绍
 
     Contributor: YJY

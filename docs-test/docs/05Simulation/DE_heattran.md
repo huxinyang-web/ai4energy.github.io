@@ -8,9 +8,8 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
 
     DE = DifferentialEquations.jl
 
@@ -22,7 +21,6 @@
 
 在[MTK手动空间离散求解PDE](./MTK_heattran.md)中介绍了手动空间离散的思想。本篇中将通过手动PDE求解传热问题对DE与MTK进行一个小对比。
 
-:::
 ---
 
 DE构建的问题过程中，需要把问题推演至求解之前。求解之前的部分都需要手动完成。[MTK手动空间离散求解PDE](./MTK_heattran.md)中提到，求解PDE的数值方法有这么几步：建立数学描述方程、对变量进行离散、迭代求解。
@@ -40,7 +38,6 @@ MTK完成了Step3、Step4的内容，而DE只能帮我们完成Step4的内容。
     如果我们仔细琢磨，会发现：如果是基于时间微分的组件化建模。使用MTK时，我们完成Step1的内容，剩下MTK全包了！所以这也是为什么说，MTK提供了**基于时间的一条龙求解**。
 
 ---
-:::
 
 我们来看看，DE是如何完成Step4的内容的。同时，也会让大家对数值求解过程有一个更加深刻的理解。
 
@@ -207,7 +204,7 @@ y_{1}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\y_{2}
 
 $$\mathbf{y}\prime=\mathbf{f}(\mathbf{x},\mathbf{y})$$
 
-::: info
+::: note
 
     求解微分方程的数值解法主要有：
 
@@ -249,9 +246,7 @@ $$\mathbf{y}\prime=\mathbf{f}(\mathbf{x},\mathbf{y})$$
 本质是通过`to_index()`消除了物理位置含义。生成了DE可计算的描述方式——最原始最根本的微分方程组数学描述方式。这一步就是前面所说的Step3。
 
 总的来看，DE求解我们手动完成了Step2、Step3、Step4。
-:::
 
 ::: tip
     MTK求解时。Step3、Step4由程序完成。
 
-:::

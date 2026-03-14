@@ -1,6 +1,6 @@
 # 动态链接库(DLL)的生成与调用实操
 
-!!! tip
+::: tip
     Contents：Julia调用Dll
 
     Contributor: 杨月宝

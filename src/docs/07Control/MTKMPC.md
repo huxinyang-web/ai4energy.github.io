@@ -1,6 +1,6 @@
 # MTK求解MPC问题
 
-!!! tip
+::: tip
     Contents：MTK、Control
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     MPC = Model Predict Control
 

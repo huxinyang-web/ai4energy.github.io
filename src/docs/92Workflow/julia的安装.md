@@ -1,6 +1,6 @@
 # Julia安装
 
-!!! tip
+::: tip
     Contents：julia安装
 
     Contributor: 孙蓓蓓、张启
@@ -16,7 +16,7 @@
 
 ## 下载julia-xxx-win64.zip安装包
 
-!!! note
+::: note
     v1.7.2(Feb 6,2022)为julia当前稳定版本。新安装时，下载最新版。
 
 首先，在搜索框中搜索julia，点击julia-releases：
@@ -44,7 +44,7 @@
 打开环境变量；在用户变量中选择变量Path，点击编辑；新建，将julia.exe文件所在路径复制进去，然后点击确定。
 ![](/assets/image/92Workflow/10.png)
 
-!!! tip
+::: tip
     也可使直接“![](/assets/image/92Workflow/icon-win.svg) + r”打开运行▱，输入 `rundll32 sysdm.cpl,EditEnvironmentVariables` 直接打开环境变量设置界面，注意，此时无法编辑系统环境变量（实际上也并不建议直接编辑系统环境变量），编辑用户环境变量即可。
 
 ## 执行julia

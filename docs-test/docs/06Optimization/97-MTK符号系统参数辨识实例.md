@@ -8,9 +8,8 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
     DEPE = DiffEqParamEstim.jl(Differential Equation Parameters Estimate)
 
     [DiffEqParamEstim.jl](https://diffeqparamestim.sciml.ai/dev/)是计算微分方程参数估计的软件包。
@@ -245,5 +244,5 @@ result.minimizer
  9.911215185371102
 ```
 
-::: info
+::: note
     该参数辨识仍然是优化问题的子集，选择不同的初值很可能得到不同的结果。

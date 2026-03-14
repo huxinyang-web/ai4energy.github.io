@@ -1,6 +1,6 @@
 # DifferentialEquations建模方法
 
-!!! tip
+::: tip
     Contents：建模、DE
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     DE = DifferentialEquations.jl
 
@@ -36,9 +36,7 @@
 
 现有洛伦兹方程为例：
 
-```math
-\frac{dx}{dt}  = \sigma(y-x) \\ \frac{dy}{dt}  = x(\rho-z)-y \\ \frac{dz}{dt} = xy - \beta z
-```
+$$\frac{dx}{dt}  = \sigma(y-x) \\ \frac{dy}{dt}  = x(\rho-z)-y \\ \frac{dz}{dt} = xy - \beta z$$
 
 微分方程在DifferentialEquations.jl中含有5个要素：
 
@@ -85,11 +83,10 @@ prob = ODEProblem(lorenz!,u0,tspan,p)
 * tspan为求解时间域
 * prob为通过方法ODEProblem()定义的ODE问题
 
-!!! tip
+::: tip
     ODEProblem = Ordinary Differential Equations Problem(常微分方程)
 
-    ```math
-    \begin{array}{l}
+    $$\begin{array}{l}
     \frac{d x}{d t}=\sigma(y-x) \\
     \frac{d y}{d t}=x(\rho-z)-y \\
     \frac{d z}{d t}=x y-\beta z
@@ -100,13 +97,10 @@ prob = ODEProblem(lorenz!,u0,tspan,p)
 
     DAEProblem = Differential Algebraic Equations Problem（微分代数方程）
 
-    ```math
-    \begin{aligned}\frac{d y_{1}}{d t} &=-0.04 y_{1}+10^{4} y_{2} y_{3} \\\frac{d y_{2}}{d t} &=0.04 y_{1}-10^{4} y_{2} y_{3}-3 * 10^{7} y_{2}^{2} \\1 &=y_{1}+y_{2}+y_{3}\end{aligned}
+    $$\begin{aligned}\frac{d y_{1}}{d t} &=-0.04 y_{1}+10^{4} y_{2} y_{3} \\\frac{d y_{2}}{d t} &=0.04 y_{1}-10^{4} y_{2} y_{3}-3 * 10^{7} y_{2}^{2} \\1 &=y_{1}+y_{2}+y_{3}\end{aligned}
     ```
 
-    DDEProblem = Delay Differential Equations Problem（随机微分）
-
-    ```math
+    DDEProblem = Delay Differential Equations Problem（随机微分）$$math
     \begin{aligned}
     d x_{0} &=\frac{v_{0}}{1+\beta_{0}\left(x_{2}(t-\tau)\right)^{2}}\left(p_{0}-q_{0}\right) x_{0}(t)-d_{0} x_{0}(t) \\d x_{1} &=\frac{v_{0}}{1+\beta_{0}\left(x_{2}(t-\tau)\right)^{2}}\left(1-p_{0}+q_{0}\right) x_{0}(t) \\&+\frac{v_{1}}{1+\beta_{1}\left(x_{2}(t-\tau)\right)^{2}}\left(p_{1}-q_{1}\right) x_{1}(t)-d_{1} x_{1}(t) \\d x_{2} &=\frac{v_{1}}{1+\beta_{1}\left(x_{2}(t-\tau)\right)^{2}}\left(1-p_{1}+q_{1}\right) x_{1}(t)-d_{2} x_{2}(t)\end{aligned}
     ```
@@ -115,9 +109,7 @@ prob = ODEProblem(lorenz!,u0,tspan,p)
 
 ---
 
-求解并画图
-
-```julia
+求解并画图$$julia
 sol = solve(prob, Tsit5())
 plot(sol,vars=(1,2,3))
 ```
@@ -154,9 +146,7 @@ Callback的含义为，当系统运行到某个状态时，人为介入改变系
 
 其数学表达为：
 
-```math
-x' = v \\ v' = -g
-```
+$$x' = v \\ v' = -g$$
 
 ---
 
@@ -244,5 +234,5 @@ sol = solve(prob, Tsit5(), callback=cb)
 plot(sol)
 ```
 
-!!! tip
+::: tip
     DE中有许多特性，例如求解结果的处理（Solution Handle）、回调函数（Callback）等等。更多特性可以在官方文档中查看。

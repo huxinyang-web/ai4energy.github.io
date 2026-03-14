@@ -1,6 +1,6 @@
 # 组件化建模实例
 
-!!! tip
+::: tip
     Contents：MTK、组件化建模
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     MTK = ModelingToolkit.jl
 

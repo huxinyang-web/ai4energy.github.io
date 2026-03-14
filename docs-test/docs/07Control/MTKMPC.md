@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: info
+::: note
 
     MPC = Model Predict Control
 

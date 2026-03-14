@@ -8,9 +8,8 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
 
     [CSV.jl](https://csv.juliadata.org/stable/)是一个快速灵活的纯 Julia包，用于处理带分隔符的文本文件。
 

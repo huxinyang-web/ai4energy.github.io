@@ -1,6 +1,6 @@
 # DE求解PDE（对比MTK）
 
-!!! tip
+::: tip
     Contents：DE、PDE、手动空间离散
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     DE = DifferentialEquations.jl
 
@@ -34,7 +34,7 @@ DE构建的问题过程中，需要把问题推演至求解之前。求解之前
 
 MTK完成了Step3、Step4的内容，而DE只能帮我们完成Step4的内容。
 
-!!! tip
+::: tip
     如果我们仔细琢磨，会发现：如果是基于时间微分的组件化建模。使用MTK时，我们完成Step1的内容，剩下MTK全包了！所以这也是为什么说，MTK提供了**基于时间的一条龙求解**。
 
 ---
@@ -66,7 +66,7 @@ $$T_f = 400 * (1 + sin(t))$$
 
 求解的全部代码如下：
 
-```@example heat
+```julia heat
 using ModelingToolkit, DifferentialEquations
 using Dates
 
@@ -125,7 +125,7 @@ println("time use:"*string(endtime - starttime))
 
 **动画**走你！
 
-```@example heat
+```julia heat
 an_len = length(sol.u)
 using Plots, GR
 res = rand(n, n, an_len)
@@ -197,16 +197,14 @@ MTK中采用`T[i, j]`的网格描述方式，这是从物理位置中对网格�
 
 DE能求解的方程是什么样的呢？如下所示：
 
-```math
-\left\{\begin{array}{c}
-y_{1}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\y_{2}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\ \ldots \\y_{n}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\ y_{1}\left(x_{0}\right)=y_{10}, y_{2}\left(x_{0}\right)=y_{20}, \ldots, y_{n}\left(x_{0}\right)=y_{n 0}\end{array}\right.
-```
+$$\left\{\begin{array}{c}
+y_{1}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\y_{2}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\ \ldots \\y_{n}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\ y_{1}\left(x_{0}\right)=y_{10}, y_{2}\left(x_{0}\right)=y_{20}, \ldots, y_{n}\left(x_{0}\right)=y_{n 0}\end{array}\right.$$
 
 写成统一的格式即：
 
 $$\mathbf{y}\prime=\mathbf{f}(\mathbf{x},\mathbf{y})$$
 
-!!! note
+::: note
 
     求解微分方程的数值解法主要有：
 
@@ -224,15 +222,13 @@ $$\mathbf{y}\prime=\mathbf{f}(\mathbf{x},\mathbf{y})$$
     $$y\left(x_{i+1}\right)=y\left(x_{i-1}\right)+\\ \frac{h}{3}\left[f\left(x_{i-1},y_{i-1}\right)+4f\left(x_i,y_i\right)+f\left(x_{i+1},y_{i+1}\right)\right]+O\left(h^5\right)$$
 
     * 标准龙格库塔法
-    ```math
-    \left\{\begin{array}{c}
+    $$\left\{\begin{array}{c}
     y_{i+1}=y_{i}+\frac{1}{6}\left(K_{1}+2 K_{2}+2 K_{3}+K_{4}\right) \\
     K_{1}=h f\left(x_{i}, y_{i}\right) \\
     K_{2}=h f\left(x_{i}+\frac{1}{2} h, y_{i}+\frac{1}{2} K_{1}\right) \\
     K_{3}=h f\left(x_{i}+\frac{1}{2} h, y_{i}+\frac{1}{2} K_{2}\right) \\
     K_{4}=h f\left(x_{i}+h, y_{i}+K_{3}\right)
-    \end{array}\right.
-    ```
+    \end{array}\right.$$
     其中，h为求解的步长。
 
     各方法阶数为（阶数越高精度越高）：
@@ -251,6 +247,6 @@ $$\mathbf{y}\prime=\mathbf{f}(\mathbf{x},\mathbf{y})$$
 
 总的来看，DE求解我们手动完成了Step2、Step3、Step4。
 
-!!! tip
+::: tip
     MTK求解时。Step3、Step4由程序完成。
 

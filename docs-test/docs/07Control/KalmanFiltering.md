@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: info
+::: note
 
     一篇[卡尔曼滤波的英文博客](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)，兼具理论与感性认识。
 

@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: info
+::: note
 
     MTK = ModelingToolkit.jl
 
@@ -97,7 +97,7 @@ $$\delta h(T_{f}-T_{W}^{n})=\delta \lambda \frac{T_{W}^{n}-T_{P}^{n}}{\frac{\del
 
 $$\frac{(T_{f}-T_{W}^{n})}{\frac{1}{h}}=\frac{T_{W}^{n}-T_{P}^{n}}{\frac{\delta}{2 \lambda}}=\frac{(T_{f}-T_{P}^{n})}{\frac{1}{h}+\frac{\delta}{2 \lambda}} \tag{a}$$
 
-::: info
+::: note
     当对流散热系数h足够大时，$\frac{2\lambda}{\delta h}\approx0$，即$T_W \approx T_f$。第三类边界条件可以近似为第一类边界条件——**壁温恒定为环境温度**，如下式推导：
 
     $$T_{W}=\frac{h T_{f}+\frac{2 \lambda}{\delta} T_{P}^{n}}{h+\frac{2 \lambda}{\delta}}=\frac{T_{f}+\frac{2 \lambda}{\delta h} T_{P}^{n}}{1+\frac{2 \lambda}{\delta h}} \approx T_f$$
@@ -134,7 +134,7 @@ $$\frac{\partial T_P}{\partial t}=\frac{a}{\delta^{2}}(T_{E}^{n}+T_{N}^{n}+T_{S}
 
 $$A = \frac{a}{\delta^2}, B = \frac{a}{\frac{\lambda\delta}{h}+\frac{\delta^{2}}{2}}$$
 
-::: info
+::: note
     当$h$很大时，$\frac{\lambda \delta}{h}\approx 0$，所以$B \approx 2A$。和前面边界条件的理解相似。同样的，这只是一种理解方式，并没有使用。
 
 内节点：

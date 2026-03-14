@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: info
+::: note
 
     [JuMP](https://jump.dev/JuMP.jl/v0.21.8/tutorials/Nonlinear%20programs/clnlbeam/)是计算优化问题的Julia软件包。
 

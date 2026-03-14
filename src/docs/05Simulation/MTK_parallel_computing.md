@@ -1,6 +1,6 @@
 # MTK并行计算求解大规模电池阵列
 
-!!! tip
+::: tip
     Contents：MTK、PDE、并行计算
 
     Contributor: HY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     MTK = ModelingToolkit.jl
 

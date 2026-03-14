@@ -1,5 +1,5 @@
 # MTK调用Sundials计算
-!!! tip
+::: tip
     Contents：MTK、Sundials
 
     Contributor: HY
@@ -8,7 +8,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     MTK = ModelingToolkit.jl
 

@@ -8,14 +8,12 @@
     Email:522432938@qq.com
 
     如有错误，请批评指正。
-:::
 
-::: info
+::: note
 
     [CoolProp](http://www.coolprop.org/index.html)为开源物性包。
     [Unitful.jl](https://painterqubits.github.io/Unitful.jl/stable/)为计算单位的包
 
-:::
 
 ## CoolProp是什么
 

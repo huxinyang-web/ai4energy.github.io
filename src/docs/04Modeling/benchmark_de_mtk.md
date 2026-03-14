@@ -1,6 +1,6 @@
 # MTK为什么比DE慢？
 
-!!! tip
+::: tip
     Contents：代码优化
 
     Contributor: HY

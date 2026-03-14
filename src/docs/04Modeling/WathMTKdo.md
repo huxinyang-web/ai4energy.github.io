@@ -1,6 +1,6 @@
 # MTK的"前世今生"
 
-!!! tip
+::: tip
     Contents：建模、MTK、Symbolics
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     MTK = ModelingToolkit.jl
 

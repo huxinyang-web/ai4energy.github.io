@@ -1,6 +1,6 @@
 # JuMP非线性参数辨识实例
 
-!!! tip
+::: tip
     Contents：参数辨识、优化、JuMP
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     JuMP = JuMP.jl
 
@@ -33,9 +33,7 @@ JuMP建模的思路主要分为3步：
 
 为了优化下面模型中的参数$a,b$：
 
-```math
-y = ax^2+sin(bx)\\a=1.5,b=0.8
-```  
+$$y = ax^2+sin(bx)\\a=1.5,b=0.8$$  
 
 人为生成数据，
 
@@ -69,7 +67,7 @@ model = Model(Ipopt.Optimizer)
 
 其次，构建优化问题的数学表达，需要用@NLexpression生成非线性优化中的中间表达Loss。使用@NLobjective，从Loss中构建最小化优化问题。参数优化问题没有变量约束，也可以说是全局优化问题。
 
-!!! tip
+::: tip
     @NLobjective、@NLexpression与非线性优化问题有关，在线性优化问题中，使用@expression。不同问题类型使用不同的宏，是JuMP问题构建的特点。
 
 ```julia
@@ -99,7 +97,7 @@ JuMP.value.(para)
  0.8133014851045581
 ```
 
-!!! warning
+::: warning
     优化的求解器不是万能的，当一个参数辨识问题无法求解时有很多原因，例如：
     * 用来描述系统的数学模型不精确
     

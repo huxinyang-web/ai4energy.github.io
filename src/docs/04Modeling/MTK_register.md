@@ -1,6 +1,6 @@
 # ModelingToolkit调用外部函数
 
-!!! tip
+::: tip
     Contents：建模、MTK、外部函数
 
     Contributor: YJY
@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-!!! note
+::: note
 
     MTK = ModelingToolkit.jl
 
@@ -33,12 +33,10 @@ $$f(x,y) + x + y = 1$$
 
 考虑一个简单系统：
 
-```math
-\frac{dy}{dt}  = u(y) \\ u(y)= \left\{\begin{aligned}
+$$\frac{dy}{dt}  = u(y) \\ u(y)= \left\{\begin{aligned}
 10, &~~ y<10 \\
 -10, &~~ y \geq 100
-\end{aligned}\right. 
-```
+\end{aligned}\right.$$
 
 这里函数u在编程时，需要用`ifelse`函数来定义， 也可以用`@register_symbolic`来注册一个符号函数。
 
@@ -46,7 +44,7 @@ $$f(x,y) + x + y = 1$$
 
 通过MTK构建：
 
-```@example e1
+```julia e1
 using ModelingToolkit,DifferentialEquations
 @variables t y(t)
 D = Differential(t)
@@ -66,7 +64,7 @@ eqs = [
 
 求解问题：
 
-```@example e1
+```julia e1
 sys = structural_simplify(sys)
 u0=[y => 50.0]
 tspan = (0.0,20.0)
@@ -84,7 +82,7 @@ plot(sol)
 
 **测试问题**：在1MPa下，求温度从300K-400K的水蒸气焓值累加和。（虽然这样做很没有意义，但是这是一种测试外部函数的有效并且简单的方法）
 
-```@example coolprop
+```julia coolprop
 using ModelingToolkit,CoolProp,DifferentialEquations
 @variables t T(t)
 D = Differential(t)
@@ -111,7 +109,7 @@ plot(sol)
 
 MTK符号运算系统加上外部调用函数符号化，基本上可以解决各类仿真问题。
 
-!!! note
+::: note
     个人观点：
 
     从仿真层面来说，MTK具有了作为一个仿真引擎的所有功能。
