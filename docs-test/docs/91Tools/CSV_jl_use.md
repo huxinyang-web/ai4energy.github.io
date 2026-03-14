@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: note
+::: info
 
     [CSV.jl](https://csv.juliadata.org/stable/)是一个快速灵活的纯 Julia包，用于处理带分隔符的文本文件。
 

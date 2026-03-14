@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: note
+::: info
     DEPE = DiffEqParamEstim.jl(Differential Equation Parameters Estimate)
 
     [DiffEqParamEstim.jl](https://diffeqparamestim.sciml.ai/dev/)是计算微分方程参数估计的软件包。
@@ -292,6 +292,6 @@ sol = solve(prob)
 
 可以看到，各点的拟合电压曲线误差范围均在约±0.006 V以内，即0.19%。电压最大误差为0.0059 V，平均误差为0.0021 V。电压误差大小远远较锂电池平台电压的变化范围小。因此从精度上看，模型误差尚在可接受的范围之内。
 
-::: note
+::: info
     该参数辨识仍然是优化问题的子集，选择不同的初值很可能得到不同的结果。
     完整代码可以在`/src`目录下查看

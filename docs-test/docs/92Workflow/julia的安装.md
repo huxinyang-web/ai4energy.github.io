@@ -16,7 +16,7 @@
 
 ## 下载julia-xxx-win64.zip安装包
 
-::: note
+::: info
     v1.7.2(Feb 6,2022)为julia当前稳定版本。新安装时，下载最新版。
 
 首先，在搜索框中搜索julia，点击julia-releases：

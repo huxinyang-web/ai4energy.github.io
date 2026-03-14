@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: note
+::: info
 
     DE = DifferentialEquations.jl
 
@@ -204,7 +204,7 @@ y_{1}^{\prime}(x)=f\left(x, y_{1}(x), y_{2}(x), \ldots, y_{n}(x) \right) \\y_{2}
 
 $$\mathbf{y}\prime=\mathbf{f}(\mathbf{x},\mathbf{y})$$
 
-::: note
+::: info
 
     求解微分方程的数值解法主要有：
 

@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: note
+::: info
 
     MTK = ModelingToolkit.jl
 

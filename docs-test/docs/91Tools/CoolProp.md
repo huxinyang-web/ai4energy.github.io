@@ -9,7 +9,7 @@
 
     如有错误，请批评指正。
 
-::: note
+::: info
 
     [CoolProp](http://www.coolprop.org/index.html)为开源物性包。
     [Unitful.jl](https://painterqubits.github.io/Unitful.jl/stable/)为计算单位的包
