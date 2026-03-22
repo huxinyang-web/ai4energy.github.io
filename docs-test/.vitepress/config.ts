@@ -7,6 +7,18 @@ export default defineConfig({
   description: 'Ai4Energy 的主页',
   base: '/ai4energy.github.io/',
   ignoreDeadLinks: true,
+
+  markdown: {
+    config: (md) => {
+      md.use(katex)
+      md.use(mermaid)
+    }
+  },
+
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }]
+  ],
+
   themeConfig: {
     siteTitle: 'Ai4Energy',
     logo: '/logo.svg',
@@ -15,7 +27,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '课程', link: '/courses/' },
       { text: '路线图', link: '/roadmap/' },
-      { text: 'Ai4E 文档', icon: 'book', link: '/docs/' },
+      { text: 'Ai4E 文档', link: '/docs/' },
       { text: '组件库', link: '/ai4ecomplib/' },
       { text: '虚拟实验室', link: '/ai4elab/' },
       { text: '碳中和开源汇编', link: '/awesome-carbon-neutrality/' },
@@ -27,183 +39,129 @@ export default defineConfig({
     sidebar: {
       '/docs/': [
         {
-          text: 'Home',
+          text: 'CS 基础',
           collapsed: false,
           items: [
-            { text: 'Home', link: '/docs/index.md' }
+            { text: '简介', link: '/docs/01CSBase/1-Windows 命令提示符介绍' },
+            { text: 'Windows 命令提示符介绍', link: '/docs/01CSBase/1-Windows 命令提示符介绍' },
+            { text: 'PowerShell 和 Windows Terminal', link: '/docs/01CSBase/2-PowerShell 和 WindowsTerminal' },
+            { text: '环境变量及其设置', link: '/docs/01CSBase/3-环境变量及其设置' },
+            { text: 'Windows 下安装 gcc 编译器和 CLion', link: '/docs/01CSBase/4-Windows 下安装 gcc 编译器和 CLion' },
+            { text: 'make 和 Makefile 介绍', link: '/docs/01CSBase/5-make 和 Makefile 介绍' },
+            { text: '静态链接库和动态链接库', link: '/docs/01CSBase/6-静态链接库和动态链接库' },
+            { text: '以 SAM 为例整体实操一下', link: '/docs/01CSBase/7-以 SAM 为例整体实操一下' },
+            { text: '以 CoolProp 为例的实操', link: '/docs/01CSBase/8-以 CoolProp 为例的实操' },
+            { text: 'dll 生成与调用实操', link: '/docs/01CSBase/9-dll 生成与调用实操' }
           ]
         },
         {
-          text: 'CSBase',
-          collapsed: false,
-          items: [
-            { text: '1-Windows 命令提示符介绍', link: '/docs/01CSBase/1-Windows 命令提示符介绍.md' },
-            { text: '2-PowerShell 和 WindowsTerminal', link: '/docs/01CSBase/2-PowerShell 和 WindowsTerminal.md' },
-            { text: '3-环境变量及其设置', link: '/docs/01CSBase/3-环境变量及其设置.md' },
-            { text: '4-Windows 下安装 gcc 编译器和 CLion', link: '/docs/01CSBase/4-Windows 下安装 gcc 编译器和 CLion.md' },
-            { text: '5-make 和 Makefile 介绍', link: '/docs/01CSBase/5-make 和 Makefile 介绍.md' },
-            { text: '6-静态链接库和动态链接库', link: '/docs/01CSBase/6-静态链接库和动态链接库.md' },
-            { text: '7-以 SAM 为例整体实操一下', link: '/docs/01CSBase/7-以 SAM 为例整体实操一下.md' },
-            { text: '8-以 CoolProp 为例的实操', link: '/docs/01CSBase/8-以 CoolProp 为例的实操.md' },
-            { text: '9-dll 生成与调用实操', link: '/docs/01CSBase/9-dll 生成与调用实操.md' }
-          ]
-        },
-        {
-          text: 'JuliaIntro',
+          text: 'Julia 入门',
           collapsed: true,
           items: [
-            { text: '0010-julia 的安装', link: '/docs/02JuliaIntro/0010-julia 的安装.md' },
-            { text: '0020-julia 的 REPL', link: '/docs/02JuliaIntro/0020-julia 的 REPL.md' },
-            { text: '0030-julia 的语法要点', link: '/docs/02JuliaIntro/0030-julia 的语法要点.md' },
-            { text: '0040-julia 的包管理', link: '/docs/02JuliaIntro/0040-julia 的包管理.md' },
-            { text: '0050-julia 的环境', link: '/docs/02JuliaIntro/0050-julia 的环境.md' },
-            { text: '0060-创建 julia 包', link: '/docs/02JuliaIntro/0060-创建 julia 包.md' },
-            { text: '0070-julia 的类型系统', link: '/docs/02JuliaIntro/0070-julia 的类型系统.md' },
-            { text: '0090-julia 代码编译成 app', link: '/docs/02JuliaIntro/0090-julia 代码编译成 app.md' },
-            { text: '0091-julia 编译成 library', link: '/docs/02JuliaIntro/0091-julia 编译成 library.md' },
-            { text: '0092-julia 编译自定义系统镜像', link: '/docs/02JuliaIntro/0092-julia 编译自定义系统镜像.md' },
-            { text: '0110-julia 的元编程', link: '/docs/02JuliaIntro/0110-julia 的元编程.md' },
-            { text: '0120- julia-binary-wrappers', link: '/docs/02JuliaIntro/0120- julia-binary-wrappers.md' },
-            { text: '0130-ijulia', link: '/docs/02JuliaIntro/0130-ijulia.md' },
-            { text: '1001-julia 的 http 服务', link: '/docs/02JuliaIntro/1001-julia 的 http 服务.md' },
-            { text: '1002-julia 与 grpc', link: '/docs/02JuliaIntro/1002-julia 与 grpc.md' },
-            { text: '1003-julia 的前后端分离', link: '/docs/02JuliaIntro/1003-julia 的前后端分离.md' }
+            { text: '简介', link: '/docs/02JuliaIntro/0010-julia 的安装' },
+            { text: 'julia-binary-wrappers', link: '/docs/02JuliaIntro/0120-julia-binary-wrappers' }
           ]
         },
         {
-          text: 'CSAdv',
+          text: '建模工具',
           collapsed: true,
           items: [
-            { text: '1-过程抽象', link: '/docs/03CSAdv/1-过程抽象.md' },
-            { text: '2-数据抽象', link: '/docs/03CSAdv/2-数据抽象.md' },
-            { text: '3-再说说递归', link: '/docs/03CSAdv/3-再说说递归.md' },
-            { text: '4-从符号到模型', link: '/docs/03CSAdv/4-从符号到模型.md' },
-            { text: '5-抽象语法树', link: '/docs/03CSAdv/5-抽象语法树.md' },
-            { text: '6-代码生成', link: '/docs/03CSAdv/6-代码生成.md' },
-            { text: '7-领域特定语言', link: '/docs/03CSAdv/7-领域特定语言.md' },
-            { text: '8-写个库还是创个语言', link: '/docs/03CSAdv/8-写个库还是创个语言.md' },
-            { text: '9-Ascend 等解构', link: '/docs/03CSAdv/9-Ascend 等解构.md' },
-            { text: '91-OpenFoam 解构', link: '/docs/03CSAdv/91-OpenFoam 解构.md' }
+            { text: '简介', link: '/docs/04Modeling/MTK_intro' },
+            { text: 'What MTK do', link: '/docs/04Modeling/WathMTKdo' },
+            { text: 'MTK 简介', link: '/docs/04Modeling/MTK_intro' },
+            { text: 'MTK 参数辨识', link: '/docs/04Modeling/MTK_register' },
+            { text: 'MTK 技巧', link: '/docs/04Modeling/MTK_tips' },
+            { text: 'benchmark_de_mtk', link: '/docs/04Modeling/benchmark_de_mtk' }
           ]
         },
         {
-          text: 'Modeling',
+          text: '仿真',
           collapsed: true,
           items: [
-            { text: 'DE_intro', link: '/docs/04Modeling/DE_intro.md' },
-            { text: 'MTK_intro', link: '/docs/04Modeling/MTK_intro.md' },
-            { text: 'MTK_register', link: '/docs/04Modeling/MTK_register.md' },
-            { text: 'MTK_tips', link: '/docs/04Modeling/MTK_tips.md' },
-            { text: 'ModelingTutorial', link: '/docs/04Modeling/ModelingTutorial.md' },
-            { text: 'WathMTKdo', link: '/docs/04Modeling/WathMTKdo.md' },
-            { text: 'benchmark_de_mtk', link: '/docs/04Modeling/benchmark_de_mtk.md' }
+            { text: '简介', link: '/docs/05Simulation/MTK_Sundials' },
+            { text: 'MTK 热传递仿真', link: '/docs/05Simulation/MTK_heattran' },
+            { text: 'DE 热传递仿真', link: '/docs/05Simulation/DE_heattran' },
+            { text: '稳态 RC 电路', link: '/docs/05Simulation/steadyRC' }
           ]
         },
         {
-          text: 'Simulation',
+          text: '优化',
           collapsed: true,
           items: [
-            { text: '1-微分代数方程', link: '/docs/05Simulation/1-微分代数方程.md' },
-            { text: 'DE_heattran', link: '/docs/05Simulation/DE_heattran.md' },
-            { text: 'MTK_Sundials', link: '/docs/05Simulation/MTK_Sundials.md' },
-            { text: 'MTK_heattran', link: '/docs/05Simulation/MTK_heattran.md' },
-            { text: 'MTK_parallel_computing', link: '/docs/05Simulation/MTK_parallel_computing.md' },
-            { text: 'componementModel', link: '/docs/05Simulation/componementModel.md' },
-            { text: 'steadyRC', link: '/docs/05Simulation/steadyRC.md' }
+            { text: '简介', link: '/docs/06Optimization/1-优化的概念' },
+            { text: '优化的概念', link: '/docs/06Optimization/1-优化的概念' },
+            { text: '优化问题的分类', link: '/docs/06Optimization/2-优化问题的分类' },
+            { text: '能源系统工程中的优化问题', link: '/docs/06Optimization/3-能源系统工程中的优化问题' },
+            { text: '优化问题的求解过程', link: '/docs/06Optimization/4-优化问题的求解过程' },
+            { text: '优化问题的建模平台', link: '/docs/06Optimization/5-优化问题的建模平台' },
+            { text: '传统决定性算法简介', link: '/docs/06Optimization/6-传统决定性算法简介' },
+            { text: '启发式算法简介', link: '/docs/06Optimization/7-启发式算法简介' },
+            { text: '黑箱优化问题', link: '/docs/06Optimization/8-黑箱优化问题' },
+            { text: '优化问题建模之递归建模方法', link: '/docs/06Optimization/9-优化问题建模之递归建模方法' },
+            { text: '优化应用之参数估计与软测量', link: '/docs/06Optimization/90-优化应用之参数估计与软测量' },
+            { text: '一些可以看一看的优化相关工具', link: '/docs/06Optimization/92-一些可以看一看的优化相关工具' },
+            { text: 'JuMP 混合整数线性优化实例', link: '/docs/06Optimization/93-JuMP 混合整数线性优化实例' },
+            { text: 'JuMP 参数辨识', link: '/docs/06Optimization/94-JuMP 参数辨识' },
+            { text: '微分方程参数辨识实例', link: '/docs/06Optimization/95-微分方程参数辨识实例' },
+            { text: 'MTK 非线性参数辨识实例', link: '/docs/06Optimization/96-MTK 非线性参数辨识实例' },
+            { text: 'MTK 部分参数辨识实例', link: '/docs/06Optimization/98-MTK 部分参数辨识实例' },
+            { text: 'MTK 符号系统参数辨识实例', link: '/docs/06Optimization/97-MTK 符号系统参数辨识实例' },
+            { text: 'Optimization.jl', link: '/docs/06Optimization/Optimization.jl' },
+            { text: 'GenSBO', link: '/docs/06Optimization/GenSBO' },
+            { text: 'MIDACO', link: '/docs/06Optimization/MIDACO' }
           ]
         },
         {
-          text: 'Optimization',
+          text: '控制',
           collapsed: true,
           items: [
-            { text: '1-优化的概念', link: '/docs/06Optimization/1-优化的概念.md' },
-            { text: '2-优化问题的分类', link: '/docs/06Optimization/2-优化问题的分类.md' },
-            { text: '3-能源系统工程中的优化问题', link: '/docs/06Optimization/3-能源系统工程中的优化问题.md' },
-            { text: '4-优化问题的求解过程', link: '/docs/06Optimization/4-优化问题的求解过程.md' },
-            { text: '5-优化问题的建模平台', link: '/docs/06Optimization/5-优化问题的建模平台.md' },
-            { text: '6-传统决定性算法简介', link: '/docs/06Optimization/6-传统决定性算法简介.md' },
-            { text: '7-启发式算法简介', link: '/docs/06Optimization/7-启发式算法简介.md' },
-            { text: '8-黑箱优化问题', link: '/docs/06Optimization/8-黑箱优化问题.md' },
-            { text: '9-优化问题建模之递归建模方法', link: '/docs/06Optimization/9-优化问题建模之递归建模方法.md' },
-            { text: '90-优化应用之参数估计与软测量', link: '/docs/06Optimization/90-优化应用之参数估计与软测量.md' },
-            { text: '91-优化应用之代理模型', link: '/docs/06Optimization/91-优化应用之代理模型.md' },
-            { text: '92-一些可以看一看的优化相关工具', link: '/docs/06Optimization/92-一些可以看一看的优化相关工具.md' },
-            { text: '93-JuMP 混合整数线性优化实例', link: '/docs/06Optimization/93-JuMP 混合整数线性优化实例.md' },
-            { text: '94-JuMP 参数辨识', link: '/docs/06Optimization/94-JuMP 参数辨识.md' },
-            { text: '95-微分方程参数辨识实例', link: '/docs/06Optimization/95-微分方程参数辨识实例.md' },
-            { text: '96-MTK 非线性参数辨识实例', link: '/docs/06Optimization/96-MTK 非线性参数辨识实例.md' },
-            { text: '97-MTK 符号系统参数辨识实例', link: '/docs/06Optimization/97-MTK 符号系统参数辨识实例.md' },
-            { text: '98-MTK 部分参数辨识实例', link: '/docs/06Optimization/98-MTK 部分参数辨识实例.md' },
-            { text: 'GenSBO', link: '/docs/06Optimization/GenSBO.md' },
-            { text: 'MIDACO', link: '/docs/06Optimization/MIDACO.md' },
-            { text: 'Optimization.jl', link: '/docs/06Optimization/Optimization.jl.md' }
+            { text: '简介', link: '/docs/07Control/1-控制的本质' },
+            { text: 'Kalman Filtering', link: '/docs/07Control/KalmanFiltering' },
+            { text: 'Optim Control', link: '/docs/07Control/OptimControl' }
           ]
         },
         {
-          text: 'Control',
+          text: 'AI 和 ML',
           collapsed: true,
           items: [
-            { text: '1-控制的本质', link: '/docs/07Control/1-控制的本质.md' },
-            { text: 'JuMPMPC', link: '/docs/07Control/JuMPMPC.md' },
-            { text: 'KalmanFiltering', link: '/docs/07Control/KalmanFiltering.md' },
-            { text: 'MTKMPC', link: '/docs/07Control/MTKMPC.md' },
-            { text: 'OptimControl', link: '/docs/07Control/OptimControl.md' }
+            { text: '机器学习和人工智能', link: '/docs/08AIandML/1-机器学习和人工智能' }
           ]
         },
         {
-          text: 'AIandML',
+          text: '工具',
           collapsed: true,
           items: [
-            { text: '1-机器学习和人工智能', link: '/docs/08AIandML/1-机器学习和人工智能.md' }
+            { text: '简介', link: '/docs/91Tools/vscode_git' },
+            { text: 'VSCode 和 Git', link: '/docs/91Tools/vscode_git' },
+            { text: 'CoolProp', link: '/docs/91Tools/CoolProp' },
+            { text: 'CSV_jl_use', link: '/docs/91Tools/CSV_jl_use' },
+            { text: 'ssh-git 实操', link: '/docs/91Tools/3-ssh-git 实操' }
           ]
         },
         {
-          text: 'IotBigdataCloud',
+          text: '工作流',
           collapsed: true,
           items: [
-            { text: '1-物联网', link: '/docs/11IotBigdataCloud/1-物联网.md' },
-            { text: '2-消息件', link: '/docs/11IotBigdataCloud/2-消息件.md' },
-            { text: '3-大数据简介', link: '/docs/11IotBigdataCloud/3-大数据简介.md' },
-            { text: '4-从虚拟机到云计算', link: '/docs/11IotBigdataCloud/4-从虚拟机到云计算.md' },
-            { text: '5-容器化和 k8s', link: '/docs/11IotBigdataCloud/5-容器化和 k8s.md' }
+            { text: '简介', link: '/docs/92Workflow/julia 的安装' },
+            { text: 'julia 的安装', link: '/docs/92Workflow/julia 的安装' },
+            { text: 'REPL-of-Julia', link: '/docs/92Workflow/REPL-of-Julia' },
+            { text: 'julia_change_pkgserve', link: '/docs/92Workflow/julia_change_pkgserve' },
+            { text: 'gitworkflow', link: '/docs/92Workflow/gitworkflow' },
+            { text: '1-thinkaboutstudy', link: '/docs/92Workflow/1-thinkaboutstudy' },
+            { text: 'vscodePlugin', link: '/docs/92Workflow/vscodePlugin' },
+            { text: 'DocStructure', link: '/docs/92Workflow/DocStructure' }
           ]
         },
         {
-          text: 'Tools',
+          text: '物联网大数据云计算',
           collapsed: true,
           items: [
-            { text: '3-ssh-git 实操', link: '/docs/91Tools/3-ssh-git 实操.md' },
-            { text: 'CSV_jl_use', link: '/docs/91Tools/CSV_jl_use.md' },
-            { text: 'CoolProp', link: '/docs/91Tools/CoolProp.md' },
-            { text: 'vscode_git', link: '/docs/91Tools/vscode_git.md' }
-          ]
-        },
-        {
-          text: 'WorkFlow',
-          collapsed: true,
-          items: [
-            { text: '1-thinkaboutstudy', link: '/docs/92Workflow/1-thinkaboutstudy.md' },
-            { text: 'DocStructure', link: '/docs/92Workflow/DocStructure.md' },
-            { text: 'REPL-of-Julia', link: '/docs/92Workflow/REPL-of-Julia.md' },
-            { text: 'gitworkflow', link: '/docs/92Workflow/gitworkflow.md' },
-            { text: 'julia_change_pkgserve', link: '/docs/92Workflow/julia_change_pkgserve.md' },
-            { text: 'julia 的安装', link: '/docs/92Workflow/julia 的安装.md' },
-            { text: 'vscodePlugin', link: '/docs/92Workflow/vscodePlugin.md' }
-          ]
-        },
-        {
-          text: 'GolangIntro',
-          collapsed: true,
-          items: [
-            { text: '01-golang 的安装', link: '/docs/12GolangIntro/01-golang 的安装.md' },
-            { text: '02-golang 的特点', link: '/docs/12GolangIntro/02-golang 的特点.md' }
-          ]
-        },
-        {
-          text: 'EMS',
-          collapsed: true,
-          items: [
-            { text: '1-能源管理信息系统', link: '/docs/09EMS/1-能源管理信息系统.md' }
+            { text: '简介', link: '/docs/11IotBigdataCloud/1-物联网' },
+            { text: '物联网', link: '/docs/11IotBigdataCloud/1-物联网' },
+            { text: '消息件', link: '/docs/11IotBigdataCloud/2-消息件' },
+            { text: '大数据简介', link: '/docs/11IotBigdataCloud/3-大数据简介' },
+            { text: '从虚拟机到云计算', link: '/docs/11IotBigdataCloud/4-从虚拟机到云计算' },
+            { text: '容器化和 k8s', link: '/docs/11IotBigdataCloud/5-容器化和 k8s' }
           ]
         }
       ],
@@ -212,14 +170,14 @@ export default defineConfig({
           text: 'Go-zero 教程',
           collapsed: false,
           items: [
-            { text: '简介', link: '/tutorial/01-docker-compose 环境准备.md' },
-            { text: 'docker-compose 环境准备', link: '/tutorial/01-docker-compose 环境准备.md' },
-            { text: 'emqx 消息服务器准备', link: '/tutorial/02-emqx 消息服务器准备.md' },
-            { text: 'mysql 数据库准备', link: '/tutorial/03-mysql 数据库准备.md' },
-            { text: 'go-zero 环境准备', link: '/tutorial/04-go-zero 环境准备.md' },
-            { text: 'gateway 设置', link: '/tutorial/05-gateway 设置.md' },
-            { text: 'goctl 生成 api 服务', link: '/tutorial/06-goctl 生成 api 服务.md' },
-            { text: 'goctl 处理数据库模型', link: '/tutorial/07-goctl 处理数据库模型.md' }
+            { text: '简介', link: '/tutorial/01-docker-compose 环境准备' },
+            { text: 'docker-compose 环境准备', link: '/tutorial/01-docker-compose 环境准备' },
+            { text: 'emqx 消息服务器准备', link: '/tutorial/02-emqx 消息服务器准备' },
+            { text: 'mysql 数据库准备', link: '/tutorial/03-mysql 数据库准备' },
+            { text: 'go-zero 环境准备', link: '/tutorial/04-go-zero 环境准备' },
+            { text: 'gateway 设置', link: '/tutorial/05-gateway 设置' },
+            { text: 'goctl 生成 api 服务', link: '/tutorial/06-goctl 生成 api 服务' },
+            { text: 'goctl 处理数据库模型', link: '/tutorial/07-goctl 处理数据库模型' }
           ]
         }
       ],
@@ -228,22 +186,22 @@ export default defineConfig({
           text: '可再生能源',
           collapsed: false,
           items: [
-            { text: '简介', link: '/awesome-carbon-neutrality/RenewableEnergy/index.md' },
-            { text: 'SAM', link: '/awesome-carbon-neutrality/RenewableEnergy/1-SAM.md' },
-            { text: 'ReOpt', link: '/awesome-carbon-neutrality/RenewableEnergy/2-ReOpt.md' },
-            { text: 'pvlib-python', link: '/awesome-carbon-neutrality/RenewableEnergy/3-pvlib-python.md' },
-            { text: 'SolarPILOT', link: '/awesome-carbon-neutrality/RenewableEnergy/4-SolarPILOT.md' },
-            { text: 'SolarTherm', link: '/awesome-carbon-neutrality/RenewableEnergy/5-SolarTherm.md' },
-            { text: 'SolTrace', link: '/awesome-carbon-neutrality/RenewableEnergy/6-SolTrace.md' },
-            { text: 'OpenFAST', link: '/awesome-carbon-neutrality/RenewableEnergy/7-OpenFAST.md' },
-            { text: 'OpenLCA', link: '/awesome-carbon-neutrality/RenewableEnergy/8-OpenLCA.md' },
-            { text: 'FOQUS', link: '/awesome-carbon-neutrality/RenewableEnergy/9-FOQUS.md' },
-            { text: 'PLANHEAT Tool', link: '/awesome-carbon-neutrality/RenewableEnergy/10-PLANHEAT Tool.md' },
-            { text: 'Modelica Buildings library', link: '/awesome-carbon-neutrality/RenewableEnergy/11-Modelica Buildings library.md' },
-            { text: 'IDEAS', link: '/awesome-carbon-neutrality/RenewableEnergy/12-IDEAS.md' },
-            { text: 'OpenMDAO', link: '/awesome-carbon-neutrality/RenewableEnergy/13-OpenMDAO.md' },
-            { text: 'coolprop-intro', link: '/awesome-carbon-neutrality/RenewableEnergy/coolprop-intro.md' },
-            { text: 'sam-ssc', link: '/awesome-carbon-neutrality/RenewableEnergy/sam-ssc.md' }
+            { text: '简介', link: '/awesome-carbon-neutrality/RenewableEnergy/' },
+            { text: 'SAM', link: '/awesome-carbon-neutrality/RenewableEnergy/1-SAM' },
+            { text: 'ReOpt', link: '/awesome-carbon-neutrality/RenewableEnergy/2-ReOpt' },
+            { text: 'pvlib-python', link: '/awesome-carbon-neutrality/RenewableEnergy/3-pvlib-python' },
+            { text: 'SolarPILOT', link: '/awesome-carbon-neutrality/RenewableEnergy/4-SolarPILOT' },
+            { text: 'SolarTherm', link: '/awesome-carbon-neutrality/RenewableEnergy/5-SolarTherm' },
+            { text: 'SolTrace', link: '/awesome-carbon-neutrality/RenewableEnergy/6-SolTrace' },
+            { text: 'OpenFAST', link: '/awesome-carbon-neutrality/RenewableEnergy/7-OpenFAST' },
+            { text: 'OpenLCA', link: '/awesome-carbon-neutrality/RenewableEnergy/8-OpenLCA' },
+            { text: 'FOQUS', link: '/awesome-carbon-neutrality/RenewableEnergy/9-FOQUS' },
+            { text: 'PLANHEAT Tool', link: '/awesome-carbon-neutrality/RenewableEnergy/10-PLANHEAT Tool' },
+            { text: 'Modelica Buildings library', link: '/awesome-carbon-neutrality/RenewableEnergy/11-Modelica Buildings library' },
+            { text: 'IDEAS', link: '/awesome-carbon-neutrality/RenewableEnergy/12-IDEAS' },
+            { text: 'OpenMDAO', link: '/awesome-carbon-neutrality/RenewableEnergy/13-OpenMDAO' },
+            { text: 'coolprop-intro', link: '/awesome-carbon-neutrality/RenewableEnergy/coolprop-intro' },
+            { text: 'sam-ssc', link: '/awesome-carbon-neutrality/RenewableEnergy/sam-ssc' }
           ]
         }
       ],
@@ -283,16 +241,5 @@ export default defineConfig({
       label: '页面导航',
       level: 2
     }
-  },
-
-  markdown: {
-    config: (md) => {
-      md.use(katex)
-      md.use(mermaid)
-    }
-  },
-
-  head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }]
-  ]
+  }
 })
