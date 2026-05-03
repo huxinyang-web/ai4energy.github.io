@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai4Energy 文档导航</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .card-link {
+            color: #667eea;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ai4Energy Docs</h1>
+            <p>AI4Energy 文档导航门户 - 迈向智慧能源新时代</p>
+        </header>
+
+        <div class="cards">
+            <a href="https://huxinyang-web.github.io/ai4edocs-cs-basics/" class="card">
+                <div class="card-icon">📚</div>
+                <h2 class="card-title">CS 基础</h2>
+                <p class="card-desc">计算机科学基础课程，包括编程基础、数据结构等核心内容</p>
+                <span class="card-link">访问课程 →</span>
+            </a>
+
+            <a href="https://huxinyang-web.github.io/ai4edocs-dev-tools/" class="card">
+                <div class="card-icon">🛠️</div>
+                <h2 class="card-title">开发工具</h2>
+                <p class="card-desc">现代软件开发工具链，Git、Linux、命令行工具等</p>
+                <span class="card-link">访问课程 →</span>
+            </a>
+
+            <a href="https://huxinyang-web.github.io/ai4edocs-modeling/" class="card">
+                <div class="card-icon">📊</div>
+                <h2 class="card-title">建模方法</h2>
+                <p class="card-desc">数学建模与系统建模方法论，解决实际问题的建模技巧</p>
+                <span class="card-link">访问课程 →</span>
+            </a>
+
+            <a href="https://huxinyang-web.github.io/ai4edocs-optimization/" class="card">
+                <div class="card-icon">📈</div>
+                <h2 class="card-title">优化理论</h2>
+                <p class="card-desc">最优化理论与方法，线性规划、非线性规划、整数规划等</p>
+                <span class="card-link">访问课程 →</span>
+            </a>
+
+            <a href="https://huxinyang-web.github.io/ai4edocs-ai-energy/" class="card">
+                <div class="card-icon">⚡</div>
+                <h2 class="card-title">AI 能源应用</h2>
+                <p class="card-desc">人工智能在能源领域的应用实践，智慧能源系统</p>
+                <span class="card-link">访问课程 →</span>
+            </a>
+        </div>
+
+        <footer>
+            <p>Ai4Energy Project &copy; 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
