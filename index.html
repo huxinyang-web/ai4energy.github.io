@@ -1,126 +1,93 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ai4Energy 文档导航</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .card-desc {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .card-link {
-            color: #667eea;
-            font-weight: 500;
-        }
-        footer {
-            text-align: center;
-            color: white;
-            margin-top: 50px;
-            opacity: 0.8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ai4Energy — AI 赋能绿色能源</title>
+  <meta name="description" content="Ai4Energy 致力于发展人工智能在能源领域的应用，包括微分代数方程、运筹学、机器学习等。">
+  <link rel="icon" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Ai4Energy Docs</h1>
-            <p>AI4Energy 文档导航门户 - 迈向智慧能源新时代</p>
-        </header>
 
-        <div class="cards">
-            <a href="https://huxinyang-web.github.io/ai4edocs-cs-basics/" class="card">
-                <div class="card-icon">📚</div>
-                <h2 class="card-title">CS 基础</h2>
-                <p class="card-desc">计算机科学基础课程，包括编程基础、数据结构等核心内容</p>
-                <span class="card-link">访问课程 →</span>
-            </a>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="logo.svg" alt="Ai4Energy">
+      Ai4Energy
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="active">首页</a></li>
+      <li><a href="/courses/">Ai4E 文档</a></li>
+      <li><a href="/contactus.html">联系我们</a></li>
+    </ul>
+  </div>
+</nav>
 
-            <a href="https://huxinyang-web.github.io/ai4edocs-dev-tools/" class="card">
-                <div class="card-icon">🛠️</div>
-                <h2 class="card-title">开发工具</h2>
-                <p class="card-desc">现代软件开发工具链，Git、Linux、命令行工具等</p>
-                <span class="card-link">访问课程 →</span>
-            </a>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="logo.svg" alt="Ai4Energy" class="hero-logo">
+    <h1>AI 赋能 <span>绿色能源</span></h1>
+    <p>
+      致力于发展人工智能在能源领域的应用 —— 从微分代数方程到运筹学，
+      从机器学习到能源系统仿真，为绿色能源转型提供软件支撑。
+    </p>
+    <a href="#capabilities" class="btn btn-primary">探索 Ai4Energy</a>
+  </div>
+</section>
 
-            <a href="https://huxinyang-web.github.io/ai4edocs-modeling/" class="card">
-                <div class="card-icon">📊</div>
-                <h2 class="card-title">建模方法</h2>
-                <p class="card-desc">数学建模与系统建模方法论，解决实际问题的建模技巧</p>
-                <span class="card-link">访问课程 →</span>
-            </a>
+<!-- Capabilities -->
+<section id="capabilities">
+  <div class="section-inner">
+    <span class="section-label">核心能力</span>
+    <h2 class="section-title">推动能源系统智能化</h2>
+    <div class="cap-grid">
 
-            <a href="https://huxinyang-web.github.io/ai4edocs-optimization/" class="card">
-                <div class="card-icon">📈</div>
-                <h2 class="card-title">优化理论</h2>
-                <p class="card-desc">最优化理论与方法，线性规划、非线性规划、整数规划等</p>
-                <span class="card-link">访问课程 →</span>
-            </a>
+      <div class="cap-card">
+        <div class="cap-icon">⚡</div>
+        <h3>能源系统仿真引擎</h3>
+        <p>基于微分代数方程（DAE）的元流程仿真引擎 Ai4EMetaPSE，对能源系统组件进行建模，支持稳态和动态仿真。</p>
+      </div>
 
-            <a href="https://huxinyang-web.github.io/ai4edocs-ai-energy/" class="card">
-                <div class="card-icon">⚡</div>
-                <h2 class="card-title">AI 能源应用</h2>
-                <p class="card-desc">人工智能在能源领域的应用实践，智慧能源系统</p>
-                <span class="card-link">访问课程 →</span>
-            </a>
-        </div>
+      <div class="cap-card">
+        <div class="cap-icon">📐</div>
+        <h3>能源系统优化引擎</h3>
+        <p>基于分等级组件化建模方法，使用 JuMP.jl 等优化包处理能源系统优化设计问题。</p>
+      </div>
 
-        <footer>
-            <p>Ai4Energy Project &copy; 2026</p>
-        </footer>
+      <div class="cap-card">
+        <div class="cap-icon">🎯</div>
+        <h3>模型预测控制</h3>
+        <p>基于仿真引擎与优化引擎进行参数辨识与模型校准，开发能源系统模型预测控制软件。我们已开发最优控制包 OptControl。</p>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-icon">☀️</div>
+        <h3>可再生能源组件库</h3>
+        <p>适用于综合能源系统仿真的可再生能源组件库（Ai4EComponentLib），涵盖多种可再生能源设备模型，持续更新中。</p>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-icon">🔬</div>
+        <h3>综合能源系统虚拟实验室</h3>
+        <p>面向综合能源系统仿真的虚拟仿真实验室 Ai4ELab，提供可视化建模与仿真环境。</p>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-icon">🤖</div>
+        <h3>机器学习应用</h3>
+        <p>探索深度学习、强化学习等机器学习方法在能源系统优化设计、运行调度中的应用。</p>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<footer>
+  <p>陕 ICP 备 19000424 号 -2 | 陕公网安备 61010302001034 号</p>
+  <p>Copyright &copy; 2024 Ai4Energy</p>
+</footer>
+
 </body>
 </html>
