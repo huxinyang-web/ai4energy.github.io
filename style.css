@@ -126,7 +126,7 @@ nav.scrolled .nav-links a.active::after { background: var(--green); }
   padding: 100px 24px 80px;
   position: relative;
   overflow: hidden;
-  background: #071408;
+  background: #0f1c10;
 }
 
 /* Dot grid pattern */
@@ -135,7 +135,7 @@ nav.scrolled .nav-links a.active::after { background: var(--green); }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(34, 197, 94, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(34, 197, 94, 0.08) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -144,9 +144,9 @@ nav.scrolled .nav-links a.active::after { background: var(--green); }
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 35%, rgba(22, 163, 74, 0.20) 0%, transparent 40%),
-    radial-gradient(ellipse at 30% 70%, rgba(13, 148, 136, 0.10) 0%, transparent 45%),
-    radial-gradient(ellipse at 75% 30%, rgba(34, 197, 94, 0.08) 0%, transparent 40%);
+    radial-gradient(ellipse at 50% 35%, rgba(34, 197, 94, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 70%, rgba(20, 184, 166, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 30%, rgba(34, 197, 94, 0.06) 0%, transparent 40%);
 }
 
 .hero::after {
@@ -172,12 +172,12 @@ nav.scrolled .nav-links a.active::after { background: var(--green); }
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at center, rgba(34, 197, 94, 0.18) 0%, rgba(20, 184, 166, 0.06) 35%, transparent 70%);
-  animation: logoGlow 3s ease-in-out infinite;
+    radial-gradient(circle at center, rgba(34, 197, 94, 0.15) 0%, rgba(20, 184, 166, 0.05) 30%, transparent 65%);
+  animation: logoGlow 4s ease-in-out infinite;
 }
 
 /* Inner ring */
@@ -186,11 +186,11 @@ nav.scrolled .nav-links a.active::after { background: var(--green); }
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: 1px solid rgba(34, 197, 94, 0.20);
-  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  background: rgba(34, 197, 94, 0.03);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
