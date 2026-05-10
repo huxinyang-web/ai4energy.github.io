@@ -6,6 +6,9 @@
   <title>Ai4Energy — AI 赋能绿色能源</title>
   <meta name="description" content="Ai4Energy 致力于发展人工智能在能源领域的应用，包括微分代数方程、运筹学、机器学习等。">
   <link rel="icon" href="/ai4energy.github.io/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/ai4energy.github.io/style.css">
 </head>
 <body>
@@ -26,55 +29,85 @@
 
 <!-- Hero -->
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-content">
     <img src="/ai4energy.github.io/logo.svg" alt="Ai4Energy" class="hero-logo">
-    <h1>AI 赋能 <span>绿色能源</span></h1>
+    <h1>AI 赋能 <span class="gradient-text">绿色能源</span></h1>
     <p>
       致力于发展人工智能在能源领域的应用 —— 从微分代数方程到运筹学，
       从机器学习到能源系统仿真，为绿色能源转型提供软件支撑。
     </p>
-    <a href="/ai4energy.github.io/courses/" class="btn btn-primary">开始探索</a>
+    <div class="hero-buttons">
+      <a href="/ai4energy.github.io/courses/" class="btn btn-primary">开始探索</a>
+      <a href="https://github.com/huxinyang-web" class="btn btn-outline" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats reveal">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number">5</span>
+        <span class="stat-label">课程模块</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">120+</span>
+        <span class="stat-label">文档章节</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">3</span>
+        <span class="stat-label">开源工具包</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">Julia</span>
+        <span class="stat-label">技术生态</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Capabilities -->
 <section id="capabilities">
   <div class="section-inner">
-    <span class="section-label">核心能力</span>
-    <h2 class="section-title">推动能源系统智能化</h2>
+    <span class="section-label reveal">核心能力</span>
+    <h2 class="section-title reveal">推动能源系统智能化</h2>
     <div class="cap-grid">
 
-      <div class="cap-card">
+      <a href="https://huxinyang-web.github.io/ai4edocs-modeling/" class="cap-card reveal" target="_blank">
         <div class="cap-icon">⚡</div>
         <h3>能源系统仿真引擎</h3>
         <p>基于微分代数方程（DAE）的元流程仿真引擎 Ai4EMetaPSE，对能源系统组件进行建模，支持稳态和动态仿真。</p>
-      </div>
+        <span class="cap-link">了解更多 →</span>
+      </a>
 
-      <div class="cap-card">
+      <a href="https://huxinyang-web.github.io/ai4edocs-optimization/" class="cap-card reveal" target="_blank">
         <div class="cap-icon">📐</div>
         <h3>能源系统优化引擎</h3>
         <p>基于分等级组件化建模方法，使用 JuMP.jl 等优化包处理能源系统优化设计问题。</p>
-      </div>
+        <span class="cap-link">了解更多 →</span>
+      </a>
 
-      <div class="cap-card">
+      <div class="cap-card reveal">
         <div class="cap-icon">🎯</div>
         <h3>模型预测控制</h3>
         <p>基于仿真引擎与优化引擎进行参数辨识与模型校准，开发能源系统模型预测控制软件。我们已开发最优控制包 OptControl。</p>
       </div>
 
-      <div class="cap-card">
+      <div class="cap-card reveal">
         <div class="cap-icon">☀️</div>
         <h3>可再生能源组件库</h3>
         <p>适用于综合能源系统仿真的可再生能源组件库（Ai4EComponentLib），涵盖多种可再生能源设备模型，持续更新中。</p>
       </div>
 
-      <div class="cap-card">
+      <div class="cap-card reveal">
         <div class="cap-icon">🔬</div>
         <h3>综合能源系统虚拟实验室</h3>
         <p>面向综合能源系统仿真的虚拟仿真实验室 Ai4ELab，提供可视化建模与仿真环境。</p>
       </div>
 
-      <div class="cap-card">
+      <div class="cap-card reveal">
         <div class="cap-icon">🤖</div>
         <h3>机器学习应用</h3>
         <p>探索深度学习、强化学习等机器学习方法在能源系统优化设计、运行调度中的应用。</p>
@@ -84,10 +117,79 @@
   </div>
 </section>
 
+<!-- Projects -->
+<section id="projects">
+  <div class="section-inner">
+    <span class="section-label reveal">开源项目</span>
+    <h2 class="section-title reveal">我们的工具与库</h2>
+    <div class="project-grid">
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <span class="project-lang">Julia</span>
+          <span class="project-pkg">OptControl.jl</span>
+        </div>
+        <p>最优控制问题的符号化解释器，自动将状态空间模型转化为 JuMP 优化模型并求解。</p>
+        <div class="project-links">
+          <a href="https://ai4energy.github.io/OptControl.jl/dev/" target="_blank">文档</a>
+          <a href="https://github.com/huxinyang-web/OptControl.jl" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <span class="project-lang">Julia</span>
+          <span class="project-pkg">Ai4EComponentLib.jl</span>
+        </div>
+        <p>基于 ModelingToolkit 的组件化能源系统模型库，涵盖管道、水泵、换热器等设备模型。</p>
+        <div class="project-links">
+          <a href="https://ai4energy.github.io/Ai4EComponentLib.jl/dev/" target="_blank">文档</a>
+          <a href="https://github.com/huxinyang-web/Ai4EComponentLib.jl" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <span class="project-lang">Julia</span>
+          <span class="project-pkg">Ai4EMetaPSE.jl</span>
+        </div>
+        <p>基于微分代数方程的元流程仿真引擎，支持能源系统稳态与动态仿真。</p>
+        <div class="project-links">
+          <a href="https://github.com/huxinyang-web/Ai4EMetaPSE.jl" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Community -->
+<section id="community" class="reveal">
+  <div class="section-inner">
+    <span class="section-label">加入我们</span>
+    <h2 class="section-title">共同推动 AI + 能源</h2>
+    <p class="community-desc">
+      Ai4Energy 是一个开放的研究社区。我们欢迎任何对人工智能与能源交叉领域感兴趣的朋友加入，
+      无论你是学生、研究员还是工程师。
+    </p>
+    <div class="community-buttons">
+      <a href="https://github.com/huxinyang-web" class="btn btn-primary" target="_blank">GitHub 组织</a>
+      <a href="/ai4energy.github.io/contactus.html" class="btn btn-outline">联系我们</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <p>陕 ICP 备 19000424 号 -2 | 陕公网安备 61010302001034 号</p>
   <p>Copyright &copy; 2024 Ai4Energy</p>
 </footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
