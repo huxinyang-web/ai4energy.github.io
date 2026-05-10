@@ -97,7 +97,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 100px 24px 80px;
   position: relative;
   overflow: hidden;
@@ -124,12 +123,17 @@ nav {
   opacity: 0.3;
 }
 
-.hero-content { position: relative; max-width: 720px; }
+.hero-content {
+  position: relative;
+  max-width: 960px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
 
 .hero-logo-wrap {
   position: relative;
-  display: inline-block;
-  margin-bottom: 36px;
+  flex-shrink: 0;
 }
 
 /* Soft large glow behind logo */
@@ -158,8 +162,12 @@ nav {
   filter: drop-shadow(0 4px 20px rgba(22, 163, 74, 0.12));
 }
 
+.hero-text {
+  text-align: left;
+}
+
 .hero h1 {
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 16px;
@@ -170,15 +178,14 @@ nav {
 .hero p {
   font-size: clamp(15px, 2vw, 18px);
   color: var(--text-muted);
-  max-width: 560px;
-  margin: 0 auto 40px;
+  max-width: 480px;
+  margin: 0 0 32px;
   line-height: 1.7;
 }
 
 .hero-buttons {
   display: flex;
   gap: 14px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -644,6 +651,10 @@ footer p {
 @media (max-width: 768px) {
   .nav-links { gap: 20px; }
   .nav-links a { font-size: 14px; }
+  .hero-content { flex-direction: column; gap: 32px; text-align: center; }
+  .hero-text { text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .hero p { margin: 0 auto 32px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .cap-grid { grid-template-columns: 1fr; }
   .course-grid { grid-template-columns: 1fr; }
